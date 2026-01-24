@@ -1,129 +1,129 @@
 {
   "books": [
     { "name": "Kryminał skandynawski", "rules": [
-      { "condition": "gatunek == 'kryminał'", "points": 30, "description": "Czytelnik preferuje kryminały" },
+      { "condition": "gatunek == 'kryminal'", "points": 30, "description": "Czytelnik preferuje kryminały" },
       { "condition": "klimat == 'mroczny'", "points": 20, "description": "Lubi mroczny klimat powieści" },
       { "condition": "pochodzenie == 'skandynawia'", "points": 30, "description": "Interesuje się literaturą skandynawską" },
-      { "condition": "dlugosc == 'długa'", "points": 10, "description": "Nie przeszkadza mu dłuższa lektura" },
+      { "condition": "dlugosc == 'dluga'", "points": 10, "description": "Nie przeszkadza mu dłuższa lektura" },
       { "condition": "tempo == 'wolne'", "points": 10, "description": "Lubi powolne budowanie napięcia" }
     ] },
     { "name": "Fantastyka epicka", "rules": [
       { "condition": "gatunek == 'fantasy'", "points": 30, "description": "Uwielbia fantastykę" },
-      { "condition": "dlugosc == 'bardzo długa'", "points": 20, "description": "Nie boi się opasłych tomów" },
+      { "condition": "dlugosc == 'bardzo_dluga'", "points": 20, "description": "Nie boi się opasłych tomów" },
       { "condition": "tempo == 'dynamiczne'", "points": 10, "description": "Lubi szybkie zwroty akcji" },
-      { "condition": "wiek_bohatera == 'młody'", "points": 10, "description": "Preferuje młodych bohaterów" },
-      { "condition": "świat == 'magiczny'", "points": 30, "description": "Ceni rozbudowane światy magiczne" }
+      { "condition": "wiek_bohatera == 'mlody'", "points": 10, "description": "Preferuje młodych bohaterów" },
+      { "condition": "swiat == 'magiczny'", "points": 30, "description": "Ceni rozbudowane światy magiczne" }
     ] },
     { "name": "Romans współczesny", "rules": [
       { "condition": "gatunek == 'romans'", "points": 30, "description": "Lubi romanse" },
       { "condition": "klimat == 'lekki'", "points": 20, "description": "Preferuje lekką atmosferę" },
-      { "condition": "wiek_bohatera == 'dorosły'", "points": 10, "description": "Woli dorosłych bohaterów" },
+      { "condition": "wiek_bohatera == 'dorosly'", "points": 10, "description": "Woli dorosłych bohaterów" },
       { "condition": "miejsce == 'miasto'", "points": 20, "description": "Akcja w mieście to jego klimat" },
-      { "condition": "dlugosc == 'średnia'", "points": 10, "description": "Nie lubi zbyt długich książek" }
+      { "condition": "dlugosc == 'srednia'", "points": 10, "description": "Nie lubi zbyt długich książek" }
     ] },
     { "name": "Biografia inspirująca", "rules": [
       { "condition": "gatunek == 'biografia'", "points": 30, "description": "Interesuje się biografiami" },
-      { "condition": "klimat == 'inspirujący'", "points": 30, "description": "Szukasz inspiracji" },
-      { "condition": "wiek_bohatera == 'dorosły'", "points": 10, "description": "Cenisz dojrzałość bohaterów" },
-      { "condition": "miejsce == 'świat'", "points": 10, "description": "Interesuje Cię światowa perspektywa" },
-      { "condition": "dlugosc == 'krótka'", "points": 10, "description": "Wolisz krótsze książki" }
+      { "condition": "klimat == 'inspirujacy'", "points": 30, "description": "Szukasz inspiracji" },
+      { "condition": "wiek_bohatera == 'dorosly'", "points": 10, "description": "Cenisz dojrzałość bohaterów" },
+      { "condition": "miejsce == 'swiat'", "points": 10, "description": "Interesuje Cię światowa perspektywa" },
+      { "condition": "dlugosc == 'krotka'", "points": 10, "description": "Wolisz krótsze książki" }
     ] },
     { "name": "Science fiction klasyczne", "rules": [
-      { "condition": "gatunek == 'science fiction'", "points": 30, "description": "Fascynuje Cię science fiction" },
+      { "condition": "gatunek == 'science_fiction'", "points": 30, "description": "Fascynuje Cię science fiction" },
       { "condition": "klimat == 'refleksyjny'", "points": 20, "description": "Lubisz refleksyjne historie" },
-      { "condition": "świat == 'przyszłość'", "points": 30, "description": "Ciekawi Cię przyszłość" },
+      { "condition": "swiat == 'przyszlosc'", "points": 30, "description": "Ciekawi Cię przyszłość" },
       { "condition": "tempo == 'umiarkowane'", "points": 10, "description": "Nie przeszkadza Ci umiarkowane tempo" },
-      { "condition": "dlugosc == 'średnia'", "points": 10, "description": "Preferujesz średniej długości książki" }
+      { "condition": "dlugosc == 'srednia'", "points": 10, "description": "Preferujesz średniej długości książki" }
     ] },
     { "name": "Powieść historyczna", "rules": [
       { "condition": "gatunek == 'historyczna'", "points": 30, "description": "Lubi powieści historyczne" },
-      { "condition": "epoka == 'średniowiecze'", "points": 20, "description": "Interesuje się średniowieczem" },
+      { "condition": "epoka == 'sredniowiecze'", "points": 20, "description": "Interesuje się średniowieczem" },
       { "condition": "klimat == 'epicki'", "points": 20, "description": "Ceni epicki rozmach" },
-      { "condition": "dlugosc == 'długa'", "points": 10, "description": "Nie przeszkadza mu dłuższa lektura" },
+      { "condition": "dlugosc == 'dluga'", "points": 10, "description": "Nie przeszkadza mu dłuższa lektura" },
       { "condition": "miejsce == 'europa'", "points": 10, "description": "Preferuje europejskie realia" }
     ] },
     { "name": "Thriller psychologiczny", "rules": [
       { "condition": "gatunek == 'thriller'", "points": 30, "description": "Lubi thrillery" },
       { "condition": "klimat == 'psychologiczny'", "points": 30, "description": "Ceni psychologiczne napięcie" },
       { "condition": "tempo == 'dynamiczne'", "points": 20, "description": "Lubi szybkie tempo" },
-      { "condition": "dlugosc == 'średnia'", "points": 10, "description": "Preferuje średniej długości książki" },
-      { "condition": "wiek_bohatera == 'dorosły'", "points": 10, "description": "Woli dorosłych bohaterów" }
+      { "condition": "dlugosc == 'srednia'", "points": 10, "description": "Preferuje średniej długości książki" },
+      { "condition": "wiek_bohatera == 'dorosly'", "points": 10, "description": "Woli dorosłych bohaterów" }
     ] },
     { "name": "Literatura podróżnicza", "rules": [
-      { "condition": "gatunek == 'podróżnicza'", "points": 30, "description": "Interesuje się podróżami" },
-      { "condition": "miejsce == 'świat'", "points": 30, "description": "Ciekawi go świat" },
+      { "condition": "gatunek == 'podroznicza'", "points": 30, "description": "Interesuje się podróżami" },
+      { "condition": "miejsce == 'swiat'", "points": 30, "description": "Ciekawi go świat" },
       { "condition": "klimat == 'przygodowy'", "points": 20, "description": "Lubi przygodowe historie" },
-      { "condition": "dlugosc == 'krótka'", "points": 10, "description": "Woli krótsze książki" },
+      { "condition": "dlugosc == 'krotka'", "points": 10, "description": "Woli krótsze książki" },
       { "condition": "tempo == 'dynamiczne'", "points": 10, "description": "Ceni szybkie tempo" }
     ] },
     { "name": "Powieść obyczajowa", "rules": [
       { "condition": "gatunek == 'obyczajowa'", "points": 30, "description": "Lubi powieści obyczajowe" },
       { "condition": "klimat == 'realistyczny'", "points": 20, "description": "Ceni realizm" },
-      { "condition": "miejsce == 'wieś'", "points": 20, "description": "Preferuje wiejskie klimaty" },
+      { "condition": "miejsce == 'wies'", "points": 20, "description": "Preferuje wiejskie klimaty" },
       { "condition": "wiek_bohatera == 'starszy'", "points": 10, "description": "Ceni dojrzałych bohaterów" },
-      { "condition": "dlugosc == 'średnia'", "points": 10, "description": "Preferuje średniej długości książki" }
+      { "condition": "dlugosc == 'srednia'", "points": 10, "description": "Preferuje średniej długości książki" }
     ] },
     { "name": "Horror gotycki", "rules": [
       { "condition": "gatunek == 'horror'", "points": 30, "description": "Lubi horrory" },
       { "condition": "klimat == 'gotycki'", "points": 30, "description": "Ceni gotycki klimat" },
       { "condition": "miejsce == 'zamek'", "points": 20, "description": "Uwielbia zamkowe scenerie" },
-      { "condition": "dlugosc == 'krótka'", "points": 10, "description": "Woli krótsze książki" },
+      { "condition": "dlugosc == 'krotka'", "points": 10, "description": "Woli krótsze książki" },
       { "condition": "tempo == 'wolne'", "points": 10, "description": "Lubi powolne budowanie napięcia" }
     ] },
     { "name": "Powieść młodzieżowa", "rules": [
-      { "condition": "gatunek == 'młodzieżowa'", "points": 30, "description": "Lubi literaturę młodzieżową" },
-      { "condition": "wiek_bohatera == 'młody'", "points": 30, "description": "Preferuje młodych bohaterów" },
+      { "condition": "gatunek == 'mlodziezowa'", "points": 30, "description": "Lubi literaturę młodzieżową" },
+      { "condition": "wiek_bohatera == 'mlody'", "points": 30, "description": "Preferuje młodych bohaterów" },
       { "condition": "klimat == 'lekki'", "points": 20, "description": "Ceni lekkość" },
-      { "condition": "miejsce == 'szkoła'", "points": 10, "description": "Akcja w szkole to jego klimat" },
-      { "condition": "dlugosc == 'średnia'", "points": 10, "description": "Preferuje średniej długości książki" }
+      { "condition": "miejsce == 'szkola'", "points": 10, "description": "Akcja w szkole to jego klimat" },
+      { "condition": "dlugosc == 'srednia'", "points": 10, "description": "Preferuje średniej długości książki" }
     ] },
     { "name": "Esej filozoficzny", "rules": [
       { "condition": "gatunek == 'esej'", "points": 30, "description": "Ceni eseje" },
       { "condition": "klimat == 'refleksyjny'", "points": 30, "description": "Lubi refleksyjne teksty" },
-      { "condition": "dlugosc == 'krótka'", "points": 20, "description": "Woli krótsze formy" },
+      { "condition": "dlugosc == 'krotka'", "points": 20, "description": "Woli krótsze formy" },
       { "condition": "wiek_bohatera == 'brak'", "points": 10, "description": "Nie wymaga bohatera" },
       { "condition": "tempo == 'wolne'", "points": 10, "description": "Lubi powolne rozważania" }
     ] },
     { "name": "Reportaż społeczny", "rules": [
-      { "condition": "gatunek == 'reportaż'", "points": 30, "description": "Ceni reportaże" },
+      { "condition": "gatunek == 'reportaz'", "points": 30, "description": "Ceni reportaże" },
       { "condition": "klimat == 'realistyczny'", "points": 30, "description": "Ceni realizm" },
       { "condition": "miejsce == 'miasto'", "points": 20, "description": "Interesuje go życie miejskie" },
-      { "condition": "dlugosc == 'średnia'", "points": 10, "description": "Preferuje średniej długości książki" },
+      { "condition": "dlugosc == 'srednia'", "points": 10, "description": "Preferuje średniej długości książki" },
       { "condition": "tempo == 'dynamiczne'", "points": 10, "description": "Ceni szybkie tempo" }
     ] },
     { "name": "Powieść przygodowa", "rules": [
       { "condition": "gatunek == 'przygodowa'", "points": 30, "description": "Lubi przygodowe powieści" },
       { "condition": "klimat == 'przygodowy'", "points": 30, "description": "Ceni przygodowy klimat" },
-      { "condition": "miejsce == 'dżungla'", "points": 20, "description": "Uwielbia egzotyczne miejsca" },
+      { "condition": "miejsce == 'dzungla'", "points": 20, "description": "Uwielbia egzotyczne miejsca" },
       { "condition": "tempo == 'dynamiczne'", "points": 10, "description": "Ceni szybkie tempo" },
-      { "condition": "dlugosc == 'długa'", "points": 10, "description": "Nie przeszkadza mu dłuższa lektura" }
+      { "condition": "dlugosc == 'dluga'", "points": 10, "description": "Nie przeszkadza mu dłuższa lektura" }
     ] },
-    { "name": "Satyr literacki", "rules": [
-      { "condition": "gatunek == 'satyr'", "points": 30, "description": "Lubi satyry" },
+    { "name": "Satyra literacka", "rules": [
+      { "condition": "gatunek == 'satyra'", "points": 30, "description": "Lubi satyry" },
       { "condition": "klimat == 'humorystyczny'", "points": 30, "description": "Ceni humor" },
       { "condition": "miejsce == 'miasto'", "points": 20, "description": "Akcja w mieście" },
-      { "condition": "dlugosc == 'krótka'", "points": 10, "description": "Woli krótsze książki" },
+      { "condition": "dlugosc == 'krotka'", "points": 10, "description": "Woli krótsze książki" },
       { "condition": "tempo == 'dynamiczne'", "points": 10, "description": "Ceni szybkie tempo" }
     ] },
     { "name": "Powieść postapokaliptyczna", "rules": [
       { "condition": "gatunek == 'postapo'", "points": 30, "description": "Lubi postapokaliptyczne klimaty" },
-      { "condition": "świat == 'przyszłość'", "points": 30, "description": "Ciekawi go przyszłość" },
+      { "condition": "swiat == 'przyszlosc'", "points": 30, "description": "Ciekawi go przyszłość" },
       { "condition": "klimat == 'mroczny'", "points": 20, "description": "Ceni mroczny klimat" },
       { "condition": "tempo == 'dynamiczne'", "points": 10, "description": "Ceni szybkie tempo" },
-      { "condition": "dlugosc == 'długa'", "points": 10, "description": "Nie przeszkadza mu dłuższa lektura" }
+      { "condition": "dlugosc == 'dluga'", "points": 10, "description": "Nie przeszkadza mu dłuższa lektura" }
     ] },
     { "name": "Powieść detektywistyczna", "rules": [
       { "condition": "gatunek == 'detektywistyczna'", "points": 30, "description": "Lubi zagadki" },
       { "condition": "klimat == 'tajemniczy'", "points": 30, "description": "Ceni tajemniczość" },
       { "condition": "miejsce == 'miasto'", "points": 20, "description": "Akcja w mieście" },
       { "condition": "tempo == 'umiarkowane'", "points": 10, "description": "Ceni umiarkowane tempo" },
-      { "condition": "dlugosc == 'średnia'", "points": 10, "description": "Preferuje średniej długości książki" }
+      { "condition": "dlugosc == 'srednia'", "points": 10, "description": "Preferuje średniej długości książki" }
     ] },
     { "name": "Literatura faktu", "rules": [
       { "condition": "gatunek == 'fakt'", "points": 30, "description": "Ceni literaturę faktu" },
       { "condition": "klimat == 'realistyczny'", "points": 30, "description": "Ceni realizm" },
-      { "condition": "miejsce == 'świat'", "points": 20, "description": "Interesuje go świat" },
-      { "condition": "dlugosc == 'krótka'", "points": 10, "description": "Woli krótsze książki" },
+      { "condition": "miejsce == 'swiat'", "points": 20, "description": "Interesuje go świat" },
+      { "condition": "dlugosc == 'krotka'", "points": 10, "description": "Woli krótsze książki" },
       { "condition": "tempo == 'wolne'", "points": 10, "description": "Lubi powolne rozważania" }
     ] },
     { "name": "Powieść grozy", "rules": [
@@ -131,21 +131,20 @@
       { "condition": "klimat == 'mroczny'", "points": 30, "description": "Ceni mroczny klimat" },
       { "condition": "miejsce == 'las'", "points": 20, "description": "Uwielbia leśne scenerie" },
       { "condition": "tempo == 'wolne'", "points": 10, "description": "Lubi powolne budowanie napięcia" },
-      { "condition": "dlugosc == 'średnia'", "points": 10, "description": "Preferuje średniej długości książki" }
-    ] }
-    ,
+      { "condition": "dlugosc == 'srednia'", "points": 10, "description": "Preferuje średniej długości książki" }
+    ] },
     { "name": "Komiks superbohaterski", "rules": [
       { "condition": "gatunek == 'komiks'", "points": 30, "description": "Lubi komiksy" },
       { "condition": "klimat == 'dynamiczny'", "points": 20, "description": "Ceni dynamiczną akcję" },
-      { "condition": "wiek_bohatera == 'młody'", "points": 20, "description": "Preferuje młodych bohaterów" },
-      { "condition": "świat == 'współczesny'", "points": 20, "description": "Lubi współczesne realia" },
-      { "condition": "dlugosc == 'krótka'", "points": 10, "description": "Woli krótsze formy" }
+      { "condition": "wiek_bohatera == 'mlody'", "points": 20, "description": "Preferuje młodych bohaterów" },
+      { "condition": "swiat == 'wspolczesny'", "points": 20, "description": "Lubi współczesne realia" },
+      { "condition": "dlugosc == 'krotka'", "points": 10, "description": "Woli krótsze formy" }
     ] },
     { "name": "Poezja liryczna", "rules": [
       { "condition": "gatunek == 'poezja'", "points": 30, "description": "Ceni poezję" },
       { "condition": "klimat == 'liryczny'", "points": 30, "description": "Lubi liryczne nastroje" },
       { "condition": "wiek_bohatera == 'brak'", "points": 20, "description": "Nie wymaga bohatera" },
-      { "condition": "dlugosc == 'krótka'", "points": 10, "description": "Woli krótkie formy" },
+      { "condition": "dlugosc == 'krotka'", "points": 10, "description": "Woli krótkie formy" },
       { "condition": "tempo == 'wolne'", "points": 10, "description": "Ceni powolne rozważania" }
     ] }
   ]
