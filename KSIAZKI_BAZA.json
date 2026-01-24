@@ -17,14 +17,14 @@
     { "name": "Romans współczesny", "rules": [
       { "condition": "gatunek == 'romans'", "points": 30, "description": "Lubi romanse" },
       { "condition": "klimat == 'lekki'", "points": 20, "description": "Preferuje lekką atmosferę" },
-      { "condition": "wiek_bohatera == 'dorosly'", "points": 10, "description": "Woli dorosłych bohaterów" },
+      { "condition": "wiek_bohatera == 'dorosly'", "points": 20, "description": "Woli dorosłych bohaterów" },
       { "condition": "miejsce == 'miasto'", "points": 20, "description": "Akcja w mieście to jego klimat" },
       { "condition": "dlugosc == 'srednia'", "points": 10, "description": "Nie lubi zbyt długich książek" }
     ] },
     { "name": "Biografia inspirująca", "rules": [
       { "condition": "gatunek == 'biografia'", "points": 30, "description": "Interesuje się biografiami" },
       { "condition": "klimat == 'inspirujacy'", "points": 30, "description": "Szukasz inspiracji" },
-      { "condition": "wiek_bohatera == 'dorosly'", "points": 10, "description": "Cenisz dojrzałość bohaterów" },
+      { "condition": "wiek_bohatera == 'dorosly'", "points": 20, "description": "Cenisz dojrzałość bohaterów" },
       { "condition": "miejsce == 'swiat'", "points": 10, "description": "Interesuje Cię światowa perspektywa" },
       { "condition": "dlugosc == 'krotka'", "points": 10, "description": "Wolisz krótsze książki" }
     ] },
@@ -39,7 +39,7 @@
       { "condition": "gatunek == 'historyczna'", "points": 30, "description": "Lubi powieści historyczne" },
       { "condition": "epoka == 'sredniowiecze'", "points": 20, "description": "Interesuje się średniowieczem" },
       { "condition": "klimat == 'epicki'", "points": 20, "description": "Ceni epicki rozmach" },
-      { "condition": "dlugosc == 'dluga'", "points": 10, "description": "Nie przeszkadza mu dłuższa lektura" },
+      { "condition": "dlugosc == 'dluga'", "points": 20, "description": "Nie przeszkadza mu dłuższa lektura" },
       { "condition": "miejsce == 'europa'", "points": 10, "description": "Preferuje europejskie realia" }
     ] },
     { "name": "Thriller psychologiczny", "rules": [
@@ -60,7 +60,7 @@
       { "condition": "gatunek == 'obyczajowa'", "points": 30, "description": "Lubi powieści obyczajowe" },
       { "condition": "klimat == 'realistyczny'", "points": 20, "description": "Ceni realizm" },
       { "condition": "miejsce == 'wies'", "points": 20, "description": "Preferuje wiejskie klimaty" },
-      { "condition": "wiek_bohatera == 'starszy'", "points": 10, "description": "Ceni dojrzałych bohaterów" },
+      { "condition": "wiek_bohatera == 'starszy'", "points": 20, "description": "Ceni dojrzałych bohaterów" },
       { "condition": "dlugosc == 'srednia'", "points": 10, "description": "Preferuje średniej długości książki" }
     ] },
     { "name": "Horror gotycki", "rules": [

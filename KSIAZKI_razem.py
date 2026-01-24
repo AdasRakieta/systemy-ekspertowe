@@ -79,15 +79,15 @@ def wybierz_ksiazke(preferencje):
 # Przykład użycia
 
 profil = {
-    "gatunek": "fantasy",
-    "klimat": "mroczny",
-    "dlugosc": "bardzo_dluga",
+    "gatunek": "obyczajowa",
+    "klimat": "realistyczny",
+    "dlugosc": "srednia",
     "tempo": "dynamiczne",
-    "wiek_bohatera": "mlody",
+    "wiek_bohatera": "starszy",
     "swiat": "magiczny",
-    "miejsce": "las",
-    "pochodzenie": "europa",
-    "epoka": "sredniowiecze"
+    "miejsce": "wies",
+    "pochodzenie": "azja",
+    "epoka": "przyszłość"
 }
 
 wynik = wybierz_ksiazke(profil)
