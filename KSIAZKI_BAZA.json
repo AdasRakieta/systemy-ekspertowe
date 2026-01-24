@@ -1,160 +1,160 @@
 {
   "books": [
-    { "name": "Kryminał skandynawski", "rules": [
+    { "name": "Dziewczyna z tatuażem - Stieg Larsson", "rules": [
       { "condition": "gatunek == 'kryminal'", "points": 30, "description": "Czytelnik preferuje kryminały" },
       { "condition": "klimat == 'mroczny'", "points": 20, "description": "Lubi mroczny klimat powieści" },
       { "condition": "pochodzenie == 'skandynawia'", "points": 30, "description": "Interesuje się literaturą skandynawską" },
       { "condition": "dlugosc == 'dluga'", "points": 10, "description": "Nie przeszkadza mu dłuższa lektura" },
       { "condition": "tempo == 'wolne'", "points": 10, "description": "Lubi powolne budowanie napięcia" }
     ] },
-    { "name": "Fantastyka epicka", "rules": [
+    { "name": "Władca Pierścieni - J.R.R. Tolkien", "rules": [
       { "condition": "gatunek == 'fantasy'", "points": 30, "description": "Uwielbia fantastykę" },
       { "condition": "dlugosc == 'bardzo_dluga'", "points": 20, "description": "Nie boi się opasłych tomów" },
       { "condition": "tempo == 'dynamiczne'", "points": 10, "description": "Lubi szybkie zwroty akcji" },
       { "condition": "wiek_bohatera == 'mlody'", "points": 10, "description": "Preferuje młodych bohaterów" },
       { "condition": "swiat == 'magiczny'", "points": 30, "description": "Ceni rozbudowane światy magiczne" }
     ] },
-    { "name": "Romans współczesny", "rules": [
+    { "name": "Anna Karenina - Lew Tołstoj", "rules": [
       { "condition": "gatunek == 'romans'", "points": 30, "description": "Lubi romanse" },
       { "condition": "klimat == 'lekki'", "points": 20, "description": "Preferuje lekką atmosferę" },
       { "condition": "wiek_bohatera == 'dorosly'", "points": 20, "description": "Woli dorosłych bohaterów" },
       { "condition": "miejsce == 'miasto'", "points": 20, "description": "Akcja w mieście to jego klimat" },
       { "condition": "dlugosc == 'srednia'", "points": 10, "description": "Nie lubi zbyt długich książek" }
     ] },
-    { "name": "Biografia inspirująca", "rules": [
+    { "name": "Steve Jobs - Walter Isaacson", "rules": [
       { "condition": "gatunek == 'biografia'", "points": 30, "description": "Interesuje się biografiami" },
       { "condition": "klimat == 'inspirujacy'", "points": 30, "description": "Szukasz inspiracji" },
       { "condition": "wiek_bohatera == 'dorosly'", "points": 20, "description": "Cenisz dojrzałość bohaterów" },
       { "condition": "miejsce == 'swiat'", "points": 10, "description": "Interesuje Cię światowa perspektywa" },
       { "condition": "dlugosc == 'krotka'", "points": 10, "description": "Wolisz krótsze książki" }
     ] },
-    { "name": "Science fiction klasyczne", "rules": [
+    { "name": "Solaris - Stanisław Lem", "rules": [
       { "condition": "gatunek == 'science_fiction'", "points": 30, "description": "Fascynuje Cię science fiction" },
       { "condition": "klimat == 'refleksyjny'", "points": 20, "description": "Lubisz refleksyjne historie" },
       { "condition": "swiat == 'przyszlosc'", "points": 30, "description": "Ciekawi Cię przyszłość" },
       { "condition": "tempo == 'umiarkowane'", "points": 10, "description": "Nie przeszkadza Ci umiarkowane tempo" },
       { "condition": "dlugosc == 'srednia'", "points": 10, "description": "Preferujesz średniej długości książki" }
     ] },
-    { "name": "Powieść historyczna", "rules": [
+    { "name": "Krzyżacy - Henryk Sienkiewicz", "rules": [
       { "condition": "gatunek == 'historyczna'", "points": 30, "description": "Lubi powieści historyczne" },
       { "condition": "epoka == 'sredniowiecze'", "points": 20, "description": "Interesuje się średniowieczem" },
       { "condition": "klimat == 'epicki'", "points": 20, "description": "Ceni epicki rozmach" },
       { "condition": "dlugosc == 'dluga'", "points": 20, "description": "Nie przeszkadza mu dłuższa lektura" },
       { "condition": "miejsce == 'europa'", "points": 10, "description": "Preferuje europejskie realia" }
     ] },
-    { "name": "Thriller psychologiczny", "rules": [
+    { "name": "Zaginiona dziewczyna - Gillian Flynn", "rules": [
       { "condition": "gatunek == 'thriller'", "points": 30, "description": "Lubi thrillery" },
       { "condition": "klimat == 'psychologiczny'", "points": 30, "description": "Ceni psychologiczne napięcie" },
       { "condition": "tempo == 'dynamiczne'", "points": 20, "description": "Lubi szybkie tempo" },
       { "condition": "dlugosc == 'srednia'", "points": 10, "description": "Preferuje średniej długości książki" },
       { "condition": "wiek_bohatera == 'dorosly'", "points": 10, "description": "Woli dorosłych bohaterów" }
     ] },
-    { "name": "Literatura podróżnicza", "rules": [
+    { "name": "W pustyni i w puszczy - Henryk Sienkiewicz", "rules": [
       { "condition": "gatunek == 'podroznicza'", "points": 30, "description": "Interesuje się podróżami" },
       { "condition": "miejsce == 'swiat'", "points": 30, "description": "Ciekawi go świat" },
       { "condition": "klimat == 'przygodowy'", "points": 20, "description": "Lubi przygodowe historie" },
       { "condition": "dlugosc == 'krotka'", "points": 10, "description": "Woli krótsze książki" },
       { "condition": "tempo == 'dynamiczne'", "points": 10, "description": "Ceni szybkie tempo" }
     ] },
-    { "name": "Powieść obyczajowa", "rules": [
+    { "name": "Chłopi - Władysław Reymont", "rules": [
       { "condition": "gatunek == 'obyczajowa'", "points": 30, "description": "Lubi powieści obyczajowe" },
       { "condition": "klimat == 'realistyczny'", "points": 20, "description": "Ceni realizm" },
       { "condition": "miejsce == 'wies'", "points": 20, "description": "Preferuje wiejskie klimaty" },
       { "condition": "wiek_bohatera == 'starszy'", "points": 20, "description": "Ceni dojrzałych bohaterów" },
       { "condition": "dlugosc == 'srednia'", "points": 10, "description": "Preferuje średniej długości książki" }
     ] },
-    { "name": "Horror gotycki", "rules": [
+    { "name": "Dracula - Bram Stoker", "rules": [
       { "condition": "gatunek == 'horror'", "points": 30, "description": "Lubi horrory" },
       { "condition": "klimat == 'gotycki'", "points": 30, "description": "Ceni gotycki klimat" },
       { "condition": "miejsce == 'zamek'", "points": 20, "description": "Uwielbia zamkowe scenerie" },
       { "condition": "dlugosc == 'krotka'", "points": 10, "description": "Woli krótsze książki" },
       { "condition": "tempo == 'wolne'", "points": 10, "description": "Lubi powolne budowanie napięcia" }
     ] },
-    { "name": "Powieść młodzieżowa", "rules": [
+    { "name": "Harry Potter i Kamień Filozoficzny - J.K. Rowling", "rules": [
       { "condition": "gatunek == 'mlodziezowa'", "points": 30, "description": "Lubi literaturę młodzieżową" },
       { "condition": "wiek_bohatera == 'mlody'", "points": 30, "description": "Preferuje młodych bohaterów" },
       { "condition": "klimat == 'lekki'", "points": 20, "description": "Ceni lekkość" },
       { "condition": "miejsce == 'szkola'", "points": 10, "description": "Akcja w szkole to jego klimat" },
       { "condition": "dlugosc == 'srednia'", "points": 10, "description": "Preferuje średniej długości książki" }
     ] },
-    { "name": "Esej filozoficzny", "rules": [
+    { "name": "Być jak Słońce - Ryszard Kapuściński", "rules": [
       { "condition": "gatunek == 'esej'", "points": 30, "description": "Ceni eseje" },
       { "condition": "klimat == 'refleksyjny'", "points": 30, "description": "Lubi refleksyjne teksty" },
       { "condition": "dlugosc == 'krotka'", "points": 20, "description": "Woli krótsze formy" },
       { "condition": "wiek_bohatera == 'brak'", "points": 10, "description": "Nie wymaga bohatera" },
       { "condition": "tempo == 'wolne'", "points": 10, "description": "Lubi powolne rozważania" }
     ] },
-    { "name": "Reportaż społeczny", "rules": [
+    { "name": "Gdyby to była prawda - Marc Levy", "rules": [
       { "condition": "gatunek == 'reportaz'", "points": 30, "description": "Ceni reportaże" },
       { "condition": "klimat == 'realistyczny'", "points": 30, "description": "Ceni realizm" },
       { "condition": "miejsce == 'miasto'", "points": 20, "description": "Interesuje go życie miejskie" },
       { "condition": "dlugosc == 'srednia'", "points": 10, "description": "Preferuje średniej długości książki" },
       { "condition": "tempo == 'dynamiczne'", "points": 10, "description": "Ceni szybkie tempo" }
     ] },
-    { "name": "Reportaż polityczny", "rules": [
+    { "name": "Niewidoczny - Artur Domosławski", "rules": [
       { "condition": "gatunek == 'reportaz'", "points": 30, "description": "Ceni reportaże" },
       { "condition": "klimat == 'realistyczny'", "points": 30, "description": "Ceni realizm" },
       { "condition": "miejsce == 'miasto'", "points": 20, "description": "Interesuje go życie miejskie" },
       { "condition": "dlugosc == 'srednia'", "points": 10, "description": "Preferuje średniej długości książki" },
       { "condition": "tempo == 'dynamiczne'", "points": 10, "description": "Ceni szybkie tempo" }
     ] },
-    { "name": "Reportaż śledczy", "rules": [
+    { "name": "Cesarz - Ryszard Kapuściński", "rules": [
       { "condition": "gatunek == 'reportaz'", "points": 30, "description": "Ceni reportaże" },
       { "condition": "klimat == 'realistyczny'", "points": 30, "description": "Ceni realizm" },
       { "condition": "miejsce == 'miasto'", "points": 20, "description": "Interesuje go życie miejskie" },
       { "condition": "dlugosc == 'srednia'", "points": 10, "description": "Preferuje średniej długości książki" },
       { "condition": "tempo == 'dynamiczne'", "points": 10, "description": "Ceni szybkie tempo" }
     ] },
-    { "name": "Powieść przygodowa", "rules": [
+    { "name": "Wyspa skarbów - Robert Louis Stevenson", "rules": [
       { "condition": "gatunek == 'przygodowa'", "points": 30, "description": "Lubi przygodowe powieści" },
       { "condition": "klimat == 'przygodowy'", "points": 30, "description": "Ceni przygodowy klimat" },
       { "condition": "miejsce == 'dzungla'", "points": 20, "description": "Uwielbia egzotyczne miejsca" },
       { "condition": "tempo == 'dynamiczne'", "points": 10, "description": "Ceni szybkie tempo" },
       { "condition": "dlugosc == 'dluga'", "points": 10, "description": "Nie przeszkadza mu dłuższa lektura" }
     ] },
-    { "name": "Satyra literacka", "rules": [
+    { "name": "Mistrz i Małgorzata - Michaił Bułhakow", "rules": [
       { "condition": "gatunek == 'satyra'", "points": 30, "description": "Lubi satyry" },
       { "condition": "klimat == 'humorystyczny'", "points": 30, "description": "Ceni humor" },
       { "condition": "miejsce == 'miasto'", "points": 20, "description": "Akcja w mieście" },
       { "condition": "dlugosc == 'krotka'", "points": 10, "description": "Woli krótsze książki" },
       { "condition": "tempo == 'dynamiczne'", "points": 10, "description": "Ceni szybkie tempo" }
     ] },
-    { "name": "Powieść postapokaliptyczna", "rules": [
+    { "name": "Droga - Cormac McCarthy", "rules": [
       { "condition": "gatunek == 'postapo'", "points": 30, "description": "Lubi postapokaliptyczne klimaty" },
       { "condition": "swiat == 'przyszlosc'", "points": 30, "description": "Ciekawi go przyszłość" },
       { "condition": "klimat == 'mroczny'", "points": 20, "description": "Ceni mroczny klimat" },
       { "condition": "tempo == 'dynamiczne'", "points": 10, "description": "Ceni szybkie tempo" },
       { "condition": "dlugosc == 'dluga'", "points": 10, "description": "Nie przeszkadza mu dłuższa lektura" }
     ] },
-    { "name": "Powieść detektywistyczna", "rules": [
+    { "name": "Sherlock Holmes - Arthur Conan Doyle", "rules": [
       { "condition": "gatunek == 'detektywistyczna'", "points": 30, "description": "Lubi zagadki" },
       { "condition": "klimat == 'tajemniczy'", "points": 30, "description": "Ceni tajemniczość" },
       { "condition": "miejsce == 'miasto'", "points": 20, "description": "Akcja w mieście" },
       { "condition": "tempo == 'umiarkowane'", "points": 10, "description": "Ceni umiarkowane tempo" },
       { "condition": "dlugosc == 'srednia'", "points": 10, "description": "Preferuje średniej długości książki" }
     ] },
-    { "name": "Literatura faktu", "rules": [
+    { "name": "Hiroszima - John Hersey", "rules": [
       { "condition": "gatunek == 'fakt'", "points": 30, "description": "Ceni literaturę faktu" },
       { "condition": "klimat == 'realistyczny'", "points": 30, "description": "Ceni realizm" },
       { "condition": "miejsce == 'swiat'", "points": 20, "description": "Interesuje go świat" },
       { "condition": "dlugosc == 'krotka'", "points": 10, "description": "Woli krótsze książki" },
       { "condition": "tempo == 'wolne'", "points": 10, "description": "Lubi powolne rozważania" }
     ] },
-    { "name": "Powieść grozy", "rules": [
+    { "name": "Opowieści niesamowite - Edgar Allan Poe", "rules": [
       { "condition": "gatunek == 'groza'", "points": 30, "description": "Lubi powieści grozy" },
       { "condition": "klimat == 'mroczny'", "points": 30, "description": "Ceni mroczny klimat" },
       { "condition": "miejsce == 'las'", "points": 20, "description": "Uwielbia leśne scenerie" },
       { "condition": "tempo == 'wolne'", "points": 10, "description": "Lubi powolne budowanie napięcia" },
       { "condition": "dlugosc == 'srednia'", "points": 10, "description": "Preferuje średniej długości książki" }
     ] },
-    { "name": "Komiks superbohaterski", "rules": [
+    { "name": "Watchmen - Alan Moore", "rules": [
       { "condition": "gatunek == 'komiks'", "points": 30, "description": "Lubi komiksy" },
       { "condition": "klimat == 'dynamiczny'", "points": 20, "description": "Ceni dynamiczną akcję" },
       { "condition": "wiek_bohatera == 'mlody'", "points": 20, "description": "Preferuje młodych bohaterów" },
       { "condition": "swiat == 'wspolczesny'", "points": 20, "description": "Lubi współczesne realia" },
       { "condition": "dlugosc == 'krotka'", "points": 10, "description": "Woli krótsze formy" }
     ] },
-    { "name": "Poezja liryczna", "rules": [
+    { "name": "Sonety Krymskie - Adam Mickiewicz", "rules": [
       { "condition": "gatunek == 'poezja'", "points": 30, "description": "Ceni poezję" },
       { "condition": "klimat == 'liryczny'", "points": 30, "description": "Lubi liryczne nastroje" },
       { "condition": "wiek_bohatera == 'brak'", "points": 20, "description": "Nie wymaga bohatera" },
