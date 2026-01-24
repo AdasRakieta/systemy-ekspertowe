@@ -91,6 +91,20 @@
       { "condition": "dlugosc == 'srednia'", "points": 10, "description": "Preferuje średniej długości książki" },
       { "condition": "tempo == 'dynamiczne'", "points": 10, "description": "Ceni szybkie tempo" }
     ] },
+    { "name": "Reportaż polityczny", "rules": [
+      { "condition": "gatunek == 'reportaz'", "points": 30, "description": "Ceni reportaże" },
+      { "condition": "klimat == 'realistyczny'", "points": 30, "description": "Ceni realizm" },
+      { "condition": "miejsce == 'miasto'", "points": 20, "description": "Interesuje go życie miejskie" },
+      { "condition": "dlugosc == 'srednia'", "points": 10, "description": "Preferuje średniej długości książki" },
+      { "condition": "tempo == 'dynamiczne'", "points": 10, "description": "Ceni szybkie tempo" }
+    ] },
+    { "name": "Reportaż śledczy", "rules": [
+      { "condition": "gatunek == 'reportaz'", "points": 30, "description": "Ceni reportaże" },
+      { "condition": "klimat == 'realistyczny'", "points": 30, "description": "Ceni realizm" },
+      { "condition": "miejsce == 'miasto'", "points": 20, "description": "Interesuje go życie miejskie" },
+      { "condition": "dlugosc == 'srednia'", "points": 10, "description": "Preferuje średniej długości książki" },
+      { "condition": "tempo == 'dynamiczne'", "points": 10, "description": "Ceni szybkie tempo" }
+    ] },
     { "name": "Powieść przygodowa", "rules": [
       { "condition": "gatunek == 'przygodowa'", "points": 30, "description": "Lubi przygodowe powieści" },
       { "condition": "klimat == 'przygodowy'", "points": 30, "description": "Ceni przygodowy klimat" },

@@ -76,18 +76,18 @@ def wybierz_ksiazke(preferencje):
     }
 
 
-# Przykład użycia
+# Przykład użycia - profil testowy z 3 setkami
 
 profil = {
-    "gatunek": "obyczajowa",
+    "gatunek": "reportaz",
     "klimat": "realistyczny",
     "dlugosc": "srednia",
     "tempo": "dynamiczne",
-    "wiek_bohatera": "starszy",
-    "swiat": "magiczny",
-    "miejsce": "wies",
-    "pochodzenie": "azja",
-    "epoka": "przyszłość"
+    "wiek_bohatera": "dorosly",
+    "swiat": "przyszlosc",
+    "miejsce": "miasto",
+    "pochodzenie": "skandynawia",
+    "epoka": "sredniowiecze"
 }
 
 wynik = wybierz_ksiazke(profil)
