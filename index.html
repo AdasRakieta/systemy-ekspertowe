@@ -9,114 +9,143 @@
 <body>
     <div class="container">
         <header>
-            <h1>📚 System Ekspercki Rekomendacji Książek</h1>
-            <p class="subtitle">Znajdź idealną książkę dopasowaną do Twoich preferencji</p>
+            <h1>System Rekomendacji Książek</h1>
+            <p class="subtitle">Znajdź idealną książkę w zaledwie kilku kliknięciach</p>
         </header>
 
         <main>
+            <!-- Szybkie Presety -->
+            <div class="presets-section">
+                <h2 class="section-title">Szybki wybór</h2>
+                <p class="section-description">Wybierz gotowy profil lub dostosuj preferencje poniżej</p>
+                <div class="presets-grid" id="presetsGrid">
+                    <!-- Presety będą generowane dynamicznie -->
+                </div>
+            </div>
+
+            <!-- Główny formularz -->
             <div class="form-container">
                 <form id="preferencesForm">
-                    <div class="form-grid">
-                        <!-- Gatunek -->
-                        <div class="form-group">
-                            <label for="gatunek">📖 Gatunek</label>
-                            <select id="gatunek" name="gatunek">
-                                <option value="">-- Wybierz gatunek --</option>
-                            </select>
+                    <!-- Podstawowe preferencje (zawsze widoczne) -->
+                    <div class="preferences-section">
+                        <h3 class="preferences-title">
+                            <span>Jaki gatunek Cię interesuje?</span>
+                            <span class="badge" id="gatunekBadge">Nieważne</span>
+                        </h3>
+                        <div class="chips-container" id="gatunekChips"></div>
+                    </div>
+
+                    <div class="preferences-section">
+                        <h3 class="preferences-title">
+                            <span>Jaki klimat preferujesz?</span>
+                            <span class="badge" id="klimatBadge">Nieważne</span>
+                        </h3>
+                        <div class="chips-container" id="klimatChips"></div>
+                    </div>
+
+                    <div class="preferences-section">
+                        <h3 class="preferences-title">
+                            <span>Jakie tempo akcji?</span>
+                            <span class="badge" id="tempoBadge">Nieważne</span>
+                        </h3>
+                        <div class="chips-container" id="tempoChips"></div>
+                    </div>
+
+                    <!-- Opcje zaawansowane (rozwijane) -->
+                    <div class="advanced-toggle">
+                        <button type="button" id="toggleAdvanced" class="toggle-btn">
+                            <span class="toggle-text">Więcej opcji</span>
+                            <span class="toggle-icon">▼</span>
+                        </button>
+                    </div>
+
+                    <div id="advancedOptions" class="advanced-options" style="display: none;">
+                        <div class="preferences-section">
+                            <h3 class="preferences-title">
+                                <span>Długość książki</span>
+                                <span class="badge" id="dlugoscBadge">Nieważne</span>
+                            </h3>
+                            <div class="chips-container" id="dlugoscChips"></div>
                         </div>
 
-                        <!-- Klimat -->
-                        <div class="form-group">
-                            <label for="klimat">🌙 Klimat</label>
-                            <select id="klimat" name="klimat">
-                                <option value="">-- Wybierz klimat --</option>
-                            </select>
+                        <div class="preferences-section">
+                            <h3 class="preferences-title">
+                                <span>Świat przedstawiony</span>
+                                <span class="badge" id="swiatBadge">Nieważne</span>
+                            </h3>
+                            <div class="chips-container" id="swiatChips"></div>
                         </div>
 
-                        <!-- Długość -->
-                        <div class="form-group">
-                            <label for="dlugosc">📏 Długość</label>
-                            <select id="dlugosc" name="dlugosc">
-                                <option value="">-- Wybierz długość --</option>
-                            </select>
+                        <div class="preferences-section">
+                            <h3 class="preferences-title">
+                                <span>Wiek bohatera</span>
+                                <span class="badge" id="wiek_bohateraBadge">Nieważne</span>
+                            </h3>
+                            <div class="chips-container" id="wiek_bohateraChips"></div>
                         </div>
 
-                        <!-- Tempo -->
-                        <div class="form-group">
-                            <label for="tempo">⚡ Tempo</label>
-                            <select id="tempo" name="tempo">
-                                <option value="">-- Wybierz tempo --</option>
-                            </select>
+                        <div class="preferences-section">
+                            <h3 class="preferences-title">
+                                <span>Miejsce akcji</span>
+                                <span class="badge" id="miejsceBadge">Nieważne</span>
+                            </h3>
+                            <div class="chips-container" id="miejsceChips"></div>
                         </div>
 
-                        <!-- Wiek bohatera -->
-                        <div class="form-group">
-                            <label for="wiek_bohatera">👤 Wiek bohatera</label>
-                            <select id="wiek_bohatera" name="wiek_bohatera">
-                                <option value="">-- Wybierz wiek --</option>
-                            </select>
+                        <div class="preferences-section">
+                            <h3 class="preferences-title">
+                                <span>Pochodzenie</span>
+                                <span class="badge" id="pochodzenieBadge">Nieważne</span>
+                            </h3>
+                            <div class="chips-container" id="pochodzenieChips"></div>
                         </div>
 
-                        <!-- Świat -->
-                        <div class="form-group">
-                            <label for="swiat">🌍 Świat</label>
-                            <select id="swiat" name="swiat">
-                                <option value="">-- Wybierz świat --</option>
-                            </select>
-                        </div>
-
-                        <!-- Miejsce -->
-                        <div class="form-group">
-                            <label for="miejsce">📍 Miejsce akcji</label>
-                            <select id="miejsce" name="miejsce">
-                                <option value="">-- Wybierz miejsce --</option>
-                            </select>
-                        </div>
-
-                        <!-- Pochodzenie -->
-                        <div class="form-group">
-                            <label for="pochodzenie">🗺️ Pochodzenie</label>
-                            <select id="pochodzenie" name="pochodzenie">
-                                <option value="">-- Wybierz pochodzenie --</option>
-                            </select>
-                        </div>
-
-                        <!-- Epoka -->
-                        <div class="form-group">
-                            <label for="epoka">⏳ Epoka</label>
-                            <select id="epoka" name="epoka">
-                                <option value="">-- Wybierz epokę --</option>
-                            </select>
+                        <div class="preferences-section">
+                            <h3 class="preferences-title">
+                                <span>Epoka</span>
+                                <span class="badge" id="epokaBadge">Nieważne</span>
+                            </h3>
+                            <div class="chips-container" id="epokaChips"></div>
                         </div>
                     </div>
 
-                    <div class="button-group">
-                        <button type="submit" class="btn btn-primary">
-                            🔍 Znajdź książkę
+                    <!-- Przyciski akcji -->
+                    <div class="action-buttons">
+                        <button type="submit" class="btn btn-primary btn-large">
+                            Znajdź moją idealną książkę
                         </button>
                         <button type="reset" class="btn btn-secondary">
-                            🔄 Wyczyść
+                            Zacznij od nowa
                         </button>
+                    </div>
+
+                    <!-- Podgląd wybranych opcji -->
+                    <div id="selectionSummary" class="selection-summary" style="display: none;">
+                        <h4>✓ Twoje wybory:</h4>
+                        <div id="summaryContent" class="summary-content"></div>
                     </div>
                 </form>
             </div>
 
+            <!-- Wyniki -->
             <div id="results" class="results-container" style="display: none;">
-                <h2>🏆 Twoje Rekomendacje</h2>
+                <h2>Twoje rekomendacje</h2>
                 <div id="top3" class="top3-container"></div>
                 <div id="explanations" class="explanations-container"></div>
             </div>
 
+            <!-- Loading -->
             <div id="loading" class="loading" style="display: none;">
                 <div class="spinner"></div>
                 <p>Szukam idealnej książki dla Ciebie...</p>
             </div>
 
+            <!-- Błędy -->
             <div id="error" class="error-message" style="display: none;"></div>
         </main>
 
         <footer>
-            <p>💡 Wypełnij formularz, aby otrzymać spersonalizowane rekomendacje książek</p>
+            <p>💡 Wybierz gotowy profil lub dostosuj preferencje - im więcej wybierzesz, tym lepsza rekomendacja!</p>
         </footer>
     </div>
 
