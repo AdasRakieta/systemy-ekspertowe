@@ -1,7 +1,7 @@
 import pytest
 import rule_engine
 
-from KSIAZKI_razem import load_books_from_json
+from app import load_books_from_json
 
 
 class TestErrorHandling:

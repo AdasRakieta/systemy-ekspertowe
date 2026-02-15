@@ -1,4 +1,4 @@
-from KSIAZKI_razem import wybierz_ksiazke
+from app import wybierz_ksiazke
 
 
 class TestEdgeCases:

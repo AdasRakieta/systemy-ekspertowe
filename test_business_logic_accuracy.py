@@ -1,4 +1,4 @@
-from KSIAZKI_razem import (
+from app import (
     szacowany_czas_czytania,
     sugerowane_tempo_dla_czasu_wolnego,
     sugerowany_gatunek_dla_godziny,

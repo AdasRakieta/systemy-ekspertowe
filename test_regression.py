@@ -1,4 +1,4 @@
-from KSIAZKI_razem import wybierz_ksiazke
+from app import wybierz_ksiazke
 
 
 def test_fantasy_still_top():

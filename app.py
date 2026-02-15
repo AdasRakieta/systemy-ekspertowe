@@ -263,9 +263,6 @@ def get_options():
         "miejsce": [
             "miasto", "wies", "swiat", "las", "zamek", "szkola", "dzungla", "europa"
         ],
-        "pochodzenie": [
-            "skandynawia", "europa", "azja"
-        ],
     }
     return jsonify(options)
 

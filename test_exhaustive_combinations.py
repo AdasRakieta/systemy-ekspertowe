@@ -1,6 +1,6 @@
 import itertools
 
-from KSIAZKI_razem import wybierz_ksiazke
+from app import wybierz_ksiazke
 
 
 def test_all_possible_combinations_do_not_crash():

@@ -3,7 +3,7 @@
     { "name": "Dziewczyna z tatuażem - Stieg Larsson", "rules": [
       { "condition": "gatunek == 'kryminal'", "points": 30, "description": "Czytelnik preferuje kryminały" },
       { "condition": "klimat == 'mroczny'", "points": 20, "description": "Lubi mroczny klimat powieści" },
-      { "condition": "pochodzenie == 'skandynawia'", "points": 30, "description": "Interesuje się literaturą skandynawską" },
+      { "condition": "miejsce == 'europa'", "points": 30, "description": "Interesuje się europejskimi realiami" },
       { "condition": "dlugosc == 'dluga'", "points": 10, "description": "Nie przeszkadza mu dłuższa lektura" },
       { "condition": "tempo == 'wolne'", "points": 10, "description": "Lubi powolne budowanie napięcia" }
     ] },

@@ -10,8 +10,7 @@ const appState = {
         dlugosc: null,
         swiat: null,
         wiek_bohatera: null,
-        miejsce: null,
-        pochodzenie: null
+        miejsce: null
     }
 };
 
@@ -89,11 +88,7 @@ const polishLabels = {
         dzungla: 'Dżungla',
         europa: 'Europa'
     },
-    pochodzenie: {
-        skandynawia: 'Skandynawia',
-        europa: 'Europa',
-        azja: 'Azja'
-    }
+    
 };
 
 const suggestionValueMap = {
@@ -199,8 +194,7 @@ function applyPreset(preset) {
     updateSelectionSummary();
 
     const hasAdvanced = preset.selections.swiat || preset.selections.dlugosc ||
-        preset.selections.wiek_bohatera || preset.selections.miejsce ||
-        preset.selections.pochodzenie;
+        preset.selections.wiek_bohatera || preset.selections.miejsce;
 
     if (hasAdvanced) {
         const advancedOptions = document.getElementById('advancedOptions');
@@ -223,8 +217,7 @@ function resetSelections() {
         dlugosc: null,
         swiat: null,
         wiek_bohatera: null,
-        miejsce: null,
-        pochodzenie: null
+        miejsce: null
     };
 }
 
@@ -249,7 +242,7 @@ async function loadOptions() {
 
         const allFields = [
             'gatunek', 'klimat', 'tempo', 'dlugosc', 'swiat',
-            'wiek_bohatera', 'miejsce', 'pochodzenie'
+            'wiek_bohatera', 'miejsce'
         ];
 
         allFields.forEach(field => {
@@ -375,7 +368,7 @@ function refreshChips(field) {
 function refreshAllChips() {
     const allFields = [
         'gatunek', 'klimat', 'tempo', 'dlugosc', 'swiat',
-        'wiek_bohatera', 'miejsce', 'pochodzenie'
+        'wiek_bohatera', 'miejsce'
     ];
 
     allFields.forEach(field => refreshChips(field));
@@ -435,7 +428,7 @@ function applySuggestion(field, value) {
     updateBadge(field);
     updateSelectionSummary();
 
-    const needsAdvanced = ['dlugosc', 'swiat', 'wiek_bohatera', 'miejsce', 'pochodzenie'];
+    const needsAdvanced = ['dlugosc', 'swiat', 'wiek_bohatera', 'miejsce'];
     if (needsAdvanced.includes(field)) {
         const advancedOptions = document.getElementById('advancedOptions');
         const icon = document.querySelector('.toggle-icon');

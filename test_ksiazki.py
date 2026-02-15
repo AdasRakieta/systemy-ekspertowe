@@ -1,7 +1,7 @@
 import json
 from pathlib import Path
 
-from KSIAZKI_razem import load_books_from_json, wybierz_ksiazke
+from app import load_books_from_json, wybierz_ksiazke
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -91,8 +91,10 @@ class TestWybierzKsiazke:
         }
         wynik = wybierz_ksiazke(profil)
         
-        assert "Wyjaśnienie dla" in wynik["wyjasnienia"]
-        assert "Władca Pierścieni - J.R.R. Tolkien" in wynik["wyjasnienia"]
+        assert "winners" in wynik
+        assert any(
+            w["name"] == "Władca Pierścieni - J.R.R. Tolkien" for w in wynik["winners"]
+        )
 
 
 class TestJsonIntegrity:

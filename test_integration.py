@@ -1,4 +1,4 @@
-from KSIAZKI_razem import wybierz_ksiazke
+from app import wybierz_ksiazke
 
 
 def test_full_flow():
@@ -13,7 +13,7 @@ def test_full_flow():
     wynik = wybierz_ksiazke(profil)
 
     assert "top3" in wynik
-    assert "wyjasnienia" in wynik
+    assert "winners" in wynik
     assert len(wynik["top3"]) == 3
     assert wynik["top3"][0]["score"] > 0
 

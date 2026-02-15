@@ -207,8 +207,7 @@ if __name__ == "__main__":
         "tempo": "dynamiczne",
         "wiek_bohatera": "dorosly",
         "swiat": "przyszlosc",
-        "miejsce": "miasto",
-        "pochodzenie": "skandynawia"
+        "miejsce": "miasto"
     }
     
     wynik = wybierz_ksiazke(profil)

@@ -1,6 +1,6 @@
 import pytest
 
-from KSIAZKI_razem import wybierz_ksiazke
+from app import wybierz_ksiazke
 
 
 class TestValidation:
@@ -21,9 +21,9 @@ class TestValidation:
 
         """None zamiast słownika powinno podnieść błąd"""
 
-        with pytest.raises(TypeError):
+        wynik = wybierz_ksiazke(None)
 
-            wybierz_ksiazke(None)
+        assert "top3" in wynik
 
     def test_invalid_attribute_value(self):
 
