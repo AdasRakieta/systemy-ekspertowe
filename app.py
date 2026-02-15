@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import rule_engine
 import json
+import datetime
 from pathlib import Path
 
 app = Flask(__name__)
@@ -9,6 +10,125 @@ CORS(app)  # Umożliwia komunikację między frontendem a backendem
 
 BASE_DIR = Path(__file__).resolve().parent
 JSON_PATH = BASE_DIR / "KSIAZKI_BAZA.json"
+
+
+# ------------------ Funkcje własne ------------------
+
+def sugerowany_gatunek_dla_godziny():
+    """
+    Zwraca sugerowany gatunek książki w zależności od pory dnia.
+    """
+    godzina = datetime.datetime.now().hour
+    if 5 <= godzina <= 9:
+        return "biografia"  # rano - motywujące historie
+    elif 10 <= godzina <= 14:
+        return "reportaz"  # w ciągu dnia - poznawcze
+    elif 15 <= godzina <= 18:
+        return "thriller"  # popołudnie - angażujące
+    elif 19 <= godzina <= 22:
+        return "romans"  # wieczór - relaksujące
+    else:
+        return "horror"  # noc - mroczne
+
+
+def sugerowany_klimat_dla_nastroju(nastroj):
+    """
+    Zwraca sugerowany klimat książki w zależności od nastroju czytelnika.
+    """
+    klimaty = {
+        "dobry": "przygodowy",
+        "zly": "mroczny",
+        "neutralny": "realistyczny",
+        "smutny": "refleksyjny",
+        "radosny": "humorystyczny",
+        "zestresowany": "relaksujacy"
+    }
+    return klimaty.get(nastroj, "realistyczny")
+
+
+def szacowany_czas_czytania(dlugosc, tempo_czytania="srednie"):
+    """
+    Szacuje czas potrzebny na przeczytanie książki (w minutach).
+    """
+    bazowe_czasy = {
+        "krotka": 180,      # 3h
+        "srednia": 480,     # 8h
+        "dluga": 900,       # 15h
+        "bardzo_dluga": 1440  # 24h
+    }
+    
+    czas = bazowe_czasy.get(dlugosc, 480)
+    
+    # Modyfikacja w zależności od tempa czytania
+    if tempo_czytania == "wolne":
+        czas = int(czas * 1.5)
+    elif tempo_czytania == "szybkie":
+        czas = int(czas * 0.7)
+    
+    return czas
+
+
+def sugerowane_tempo_dla_czasu_wolnego(dostepny_czas):
+    """
+    Zwraca sugerowane tempo narracji w zależności od dostępnego czasu (w minutach).
+    """
+    if dostepny_czas < 60:
+        return "dynamiczne"  # mało czasu - coś szybkiego
+    elif dostepny_czas < 180:
+        return "umiarkowane"  # trochę czasu
+    else:
+        return "powolne"  # dużo czasu - można spokojnie
+
+
+def sugerowany_swiat_dla_pory_roku():
+    """
+    Zwraca sugerowany świat akcji w zależności od pory roku.
+    """
+    miesiac = datetime.datetime.now().month
+    
+    if miesiac in [12, 1, 2]:  # zima
+        return "przyszlosc"  # sci-fi na zimowe wieczory
+    elif miesiac in [3, 4, 5]:  # wiosna
+        return "wspolczesnosc"  # coś bliskiego rzeczywistości
+    elif miesiac in [6, 7, 8]:  # lato
+        return "fantasy"  # magiczne przygody
+    else:  # jesień (9, 10, 11)
+        return "alternatywna_rzeczywistosc"  # inny wymiar
+
+
+# ------------------ Konfiguracja rule_engine ------------------
+
+# Słownik funkcji dostępnych w regułach
+CUSTOM_FUNCTIONS = {
+    "sugerowany_gatunek_dla_godziny": sugerowany_gatunek_dla_godziny,
+    "sugerowany_klimat_dla_nastroju": sugerowany_klimat_dla_nastroju,
+    "szacowany_czas_czytania": szacowany_czas_czytania,
+    "sugerowane_tempo_dla_czasu_wolnego": sugerowane_tempo_dla_czasu_wolnego,
+    "sugerowany_swiat_dla_pory_roku": sugerowany_swiat_dla_pory_roku,
+}
+
+
+def resolver(thing, name):
+    """
+    Resolver dla rule_engine - umożliwia dostęp do zmiennych i funkcji.
+    """
+    # Najpierw zmienne wejściowe (preferencje)
+    if name in thing:
+        return thing[name]
+    
+    # Następnie funkcje
+    if name in CUSTOM_FUNCTIONS:
+        return CUSTOM_FUNCTIONS[name]
+    
+    # Jeśli pola nie ma w preferencjach, zwróć None (reguła nie będzie pasować)
+    return None
+
+
+# Tworzymy kontekst rule_engine z naszym resolverem
+context = rule_engine.Context(resolver=resolver)
+
+
+# ------------------ Ładowanie bazy książek ------------------
 
 
 def load_books_from_json(path):
@@ -49,7 +169,7 @@ def wybierz_ksiazke(preferencje):
 
         for expr, pts, explanation in book["rules"]:
             try:
-                rule = rule_engine.Rule(expr)
+                rule = rule_engine.Rule(expr, context=context)
                 if rule.matches(preferencje):
                     score += pts
                     reasons.append(f"+{pts} pkt: {explanation}")
@@ -151,6 +271,46 @@ def get_options():
         ]
     }
     return jsonify(options)
+
+
+@app.route('/api/suggestions', methods=['GET'])
+def get_suggestions():
+    """
+    Zwraca sugestie bazujące na funkcjach kontekstowych
+    (pora dnia, pora roku, itp.)
+    """
+    suggestions = {
+        "gatunek": sugerowany_gatunek_dla_godziny(),
+        "swiat": sugerowany_swiat_dla_pory_roku(),
+        "klimat_dobry_nastroj": sugerowany_klimat_dla_nastroju("dobry"),
+        "klimat_zly_nastroj": sugerowany_klimat_dla_nastroju("zły"),
+        "tempo_malo_czasu": sugerowane_tempo_dla_czasu_wolnego(45),  # 45 min
+        "tempo_duzo_czasu": sugerowane_tempo_dla_czasu_wolnego(240),  # 4h
+        "godzina": datetime.datetime.now().hour,
+        "miesiac": datetime.datetime.now().month,
+    }
+    return jsonify(suggestions)
+
+
+@app.route('/api/reading-time', methods=['POST'])
+def calculate_reading_time():
+    """
+    Oblicza szacowany czas czytania na podstawie długości i tempa
+    """
+    try:
+        data = request.get_json()
+        dlugosc = data.get('dlugosc', 'srednia')
+        tempo = data.get('tempo_czytania', 'srednie')
+        
+        czas_min = szacowany_czas_czytania(dlugosc, tempo)
+        
+        return jsonify({
+            "czas_minut": czas_min,
+            "czas_godzin": round(czas_min / 60, 1),
+            "opis": f"~{czas_min // 60}h {czas_min % 60}min"
+        })
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
 
 
 if __name__ == '__main__':
