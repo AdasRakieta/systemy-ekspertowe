@@ -37,7 +37,7 @@
     ] },
     { "name": "Krzyżacy - Henryk Sienkiewicz", "rules": [
       { "condition": "gatunek == 'historyczna'", "points": 30, "description": "Lubi powieści historyczne" },
-      { "condition": "epoka == 'sredniowiecze'", "points": 20, "description": "Interesuje się średniowieczem" },
+      { "condition": "swiat == 'historyczny'", "points": 20, "description": "Interesuje się światem historycznym" },
       { "condition": "klimat == 'epicki'", "points": 20, "description": "Ceni epicki rozmach" },
       { "condition": "dlugosc == 'dluga'", "points": 20, "description": "Nie przeszkadza mu dłuższa lektura" },
       { "condition": "miejsce == 'europa'", "points": 10, "description": "Preferuje europejskie realia" }

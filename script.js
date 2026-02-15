@@ -11,8 +11,7 @@ const appState = {
         swiat: null,
         wiek_bohatera: null,
         miejsce: null,
-        pochodzenie: null,
-        epoka: null
+        pochodzenie: null
     }
 };
 
@@ -77,7 +76,8 @@ const polishLabels = {
     swiat: {
         magiczny: 'Magiczny',
         przyszlosc: 'Przyszłość',
-        wspolczesny: 'Współczesny'
+        wspolczesny: 'Współczesny',
+        historyczny: 'Historyczny'
     },
     miejsce: {
         miasto: 'Miasto',
@@ -93,22 +93,12 @@ const polishLabels = {
         skandynawia: 'Skandynawia',
         europa: 'Europa',
         azja: 'Azja'
-    },
-    epoka: {
-        sredniowiecze: 'Średniowiecze',
-        wspolczesna: 'Współczesna',
-        przyszlosc: 'Przyszłość'
     }
 };
 
 const suggestionValueMap = {
     tempo: {
         powolne: 'wolne'
-    },
-    swiat: {
-        fantasy: 'magiczny',
-        wspolczesnosc: 'wspolczesny',
-        alternatywna_rzeczywistosc: 'magiczny'
     }
 };
 

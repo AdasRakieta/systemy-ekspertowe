@@ -107,11 +107,11 @@ def sugerowany_swiat_dla_pory_roku():
     if miesiac in [12, 1, 2]:  # zima
         return "przyszlosc"  # sci-fi na zimowe wieczory
     elif miesiac in [3, 4, 5]:  # wiosna
-        return "wspolczesnosc"  # coś bliskiego rzeczywistości
+        return "wspolczesny"  # coś bliskiego rzeczywistości
     elif miesiac in [6, 7, 8]:  # lato
-        return "fantasy"  # magiczne przygody
+        return "magiczny"  # magiczne przygody
     else:  # jesień (9, 10, 11)
-        return "alternatywna_rzeczywistosc"  # inny wymiar
+        return "historyczny"  # klasyczne klimaty
 
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -208,8 +208,7 @@ if __name__ == "__main__":
         "wiek_bohatera": "dorosly",
         "swiat": "przyszlosc",
         "miejsce": "miasto",
-        "pochodzenie": "skandynawia",
-        "epoka": "sredniowiecze"
+        "pochodzenie": "skandynawia"
     }
     
     wynik = wybierz_ksiazke(profil)
