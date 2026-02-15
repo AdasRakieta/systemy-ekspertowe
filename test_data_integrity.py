@@ -3,7 +3,7 @@ from pathlib import Path
 from KSIAZKI_razem import load_books_from_json
 
 
-BASE_DIR = Path(__file__).resolve().parents[1]
+BASE_DIR = Path(__file__).resolve().parent
 JSON_PATH = BASE_DIR / "KSIAZKI_BAZA.json"
 
 

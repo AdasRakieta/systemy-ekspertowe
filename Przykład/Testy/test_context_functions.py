@@ -33,5 +33,5 @@ def test_suggested_tempo():
 
 def test_suggested_world():
     assert sugerowany_swiat_dla_pory_roku() in [
-        "przyszlosc", "wspolczesny", "magiczny", "historyczny"
+        "przyszlosc", "wspolczesnosc", "fantasy", "alternatywna_rzeczywistosc"
     ]

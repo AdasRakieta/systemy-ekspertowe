@@ -200,7 +200,7 @@ function applyPreset(preset) {
 
     const hasAdvanced = preset.selections.swiat || preset.selections.dlugosc ||
         preset.selections.wiek_bohatera || preset.selections.miejsce ||
-        preset.selections.pochodzenie || preset.selections.epoka;
+        preset.selections.pochodzenie;
 
     if (hasAdvanced) {
         const advancedOptions = document.getElementById('advancedOptions');
@@ -224,8 +224,7 @@ function resetSelections() {
         swiat: null,
         wiek_bohatera: null,
         miejsce: null,
-        pochodzenie: null,
-        epoka: null
+        pochodzenie: null
     };
 }
 
@@ -250,7 +249,7 @@ async function loadOptions() {
 
         const allFields = [
             'gatunek', 'klimat', 'tempo', 'dlugosc', 'swiat',
-            'wiek_bohatera', 'miejsce', 'pochodzenie', 'epoka'
+            'wiek_bohatera', 'miejsce', 'pochodzenie'
         ];
 
         allFields.forEach(field => {
@@ -376,7 +375,7 @@ function refreshChips(field) {
 function refreshAllChips() {
     const allFields = [
         'gatunek', 'klimat', 'tempo', 'dlugosc', 'swiat',
-        'wiek_bohatera', 'miejsce', 'pochodzenie', 'epoka'
+        'wiek_bohatera', 'miejsce', 'pochodzenie'
     ];
 
     allFields.forEach(field => refreshChips(field));
@@ -436,7 +435,7 @@ function applySuggestion(field, value) {
     updateBadge(field);
     updateSelectionSummary();
 
-    const needsAdvanced = ['dlugosc', 'swiat', 'wiek_bohatera', 'miejsce', 'pochodzenie', 'epoka'];
+    const needsAdvanced = ['dlugosc', 'swiat', 'wiek_bohatera', 'miejsce', 'pochodzenie'];
     if (needsAdvanced.includes(field)) {
         const advancedOptions = document.getElementById('advancedOptions');
         const icon = document.querySelector('.toggle-icon');

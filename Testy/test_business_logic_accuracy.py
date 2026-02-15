@@ -50,5 +50,5 @@ class TestBusinessLogicAccuracy:
             "biografia", "reportaz", "thriller", "romans", "horror"
         ]
         assert sugerowany_swiat_dla_pory_roku() in [
-            "przyszlosc", "wspolczesnosc", "fantasy", "alternatywna_rzeczywistosc"
+            "przyszlosc", "wspolczesny", "magiczny", "historyczny"
         ]
