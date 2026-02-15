@@ -1,0 +1,199 @@
+{
+  "coffees": [
+    {
+      "name": "Espresso",
+      "rules": [
+        { "condition": "moc == 'wysoka'", "points": 40, "description": "Bardzo mocna kawa" },
+        { "condition": "mleko == 'brak'", "points": 20, "description": "Podawana bez mleka" },
+        { "condition": "wielkosc == 'mala'", "points": 10, "description": "Mała porcja espresso" },
+        { "condition": "temperatura == 'gorąca'", "points": 20, "description": "Serwowana bardzo gorąca" },
+        { "condition": "kofeina == 'wysoka'", "points": 10, "description": "Duża zawartość kofeiny" }
+      ]
+    },
+    {
+      "name": "Doppio",
+      "rules": [
+        { "condition": "moc == 'bardzo wysoka'", "points": 40, "description": "Podwójne espresso" },
+        { "condition": "mleko == 'brak'", "points": 15, "description": "Brak mleka w kawie" },
+        { "condition": "wielkosc == 'srednia'", "points": 10, "description": "Srednia, ale mocna porcja" },
+        { "condition": "temperatura == 'gorąca'", "points": 25, "description": "Podawana bardzo gorąca" },
+        { "condition": "kofeina == 'wysoka'", "points": 10, "description": "Mocna dawka kofeiny" }
+      ]
+    },
+    {
+      "name": "Americano",
+      "rules": [
+        { "condition": "moc in ['średnia','wysoka']", "points": 30, "description": "Kawa o wyraźnej mocy" },
+        { "condition": "mleko == 'brak'", "points": 20, "description": "Czarna kawa" },
+        { "condition": "wielkosc == 'duza'", "points": 20, "description": "Podawana w dużej objętości" },
+        { "condition": "temperatura == 'gorąca'", "points": 20, "description": "Gorący napar" },
+        { "condition": "kofeina == 'średnia'", "points": 10, "description": "Umiarkowana kofeina" }
+      ]
+    },
+    {
+      "name": "Cappuccino",
+      "rules": [
+        { "condition": "moc == 'średnia'", "points": 20, "description": "Średnia moc espresso" },
+        { "condition": "mleko == 'średnio'", "points": 30, "description": "Duża ilość spienionego mleka" },
+        { "condition": "wielkosc == 'srednia'", "points": 20, "description": "Standardowa wielkość" },
+        { "condition": "temperatura == 'gorąca'", "points": 20, "description": "Serwowane gorące" },
+        { "condition": "kofeina == 'średnia'", "points": 10, "description": "Średnia zawartość kofeiny" }
+      ]
+    },
+    {
+      "name": "Latte",
+      "rules": [
+        { "condition": "moc == 'niska'", "points": 20, "description": "Łagodna moc kawy" },
+        { "condition": "mleko == 'dużo'", "points": 30, "description": "Dużo mleka" },
+        { "condition": "wielkosc == 'duza'", "points": 30, "description": "Duża porcja mlecznej kawy" },
+        { "condition": "temperatura == 'gorąca'", "points": 10, "description": "Lekko gorąca" },
+        { "condition": "kofeina == 'niska'", "points": 10, "description": "Niewielka ilość kofeiny" }
+      ]
+    },
+    {
+      "name": "Mocha",
+      "rules": [
+        { "condition": "slodycz == 'wysoka'", "points": 30, "description": "Słodka kawa z czekoladą" },
+        { "condition": "mleko != 'brak'", "points": 20, "description": "Kawa mleczna" },
+        { "condition": "wielkosc == 'duza'", "points": 20, "description": "Duża porcja" },
+        { "condition": "temperatura == 'gorąca'", "points": 10, "description": "Podawana gorąca" },
+        { "condition": "kofeina == 'średnia'", "points": 20, "description": "Średnia dawka kofeiny" }
+      ]
+    },
+    {
+      "name": "Flat White",
+      "rules": [
+        { "condition": "moc == 'wysoka'", "points": 40, "description": "Mocna podwójna kawa" },
+        { "condition": "mleko == 'mało'", "points": 20, "description": "Niewielka ilość mleka" },
+        { "condition": "wielkosc == 'srednia'", "points": 20, "description": "Średnia wielkość" },
+        { "condition": "temperatura == 'gorąca'", "points": 10, "description": "Serwowana gorąca" },
+        { "condition": "kofeina == 'wysoka'", "points": 10, "description": "Dużo kofeiny" }
+      ]
+    },
+    {
+      "name": "Macchiato",
+      "rules": [
+        { "condition": "moc == 'wysoka'", "points": 40, "description": "Silne espresso" },
+        { "condition": "mleko == 'mało'", "points": 20, "description": "Tylko kropla mleka" },
+        { "condition": "slodycz == 'niska'", "points": 10, "description": "Mało słodka" },
+        { "condition": "wielkosc == 'mala'", "points": 20, "description": "Mała porcja" },
+        { "condition": "kofeina == 'wysoka'", "points": 10, "description": "Wysoka zawartość kofeiny" }
+      ]
+    },
+    {
+      "name": "Ristretto",
+      "rules": [
+        { "condition": "moc == 'bardzo wysoka'", "points": 50, "description": "Najmocniejsza forma espresso" },
+        { "condition": "mleko == 'brak'", "points": 20, "description": "Podawane bez mleka" },
+        { "condition": "wielkosc == 'mala'", "points": 20, "description": "Bardzo mała porcja" },
+        { "condition": "kofeina == 'wysoka'", "points": 10, "description": "Skondensowana kofeina" }
+      ]
+    },
+    {
+      "name": "Lungo",
+      "rules": [
+        { "condition": "moc == 'wysoka'", "points": 30, "description": "Mocne espresso" },
+        { "condition": "wielkosc == 'srednia'", "points": 30, "description": "Większa porcja niż espresso" },
+        { "condition": "mleko == 'brak'", "points": 20, "description": "Bez mleka" },
+        { "condition": "kofeina == 'wysoka'", "points": 20, "description": "Dużo kofeiny" }
+      ]
+    },
+    {
+      "name": "Cortado",
+      "rules": [
+        { "condition": "moc == 'wysoka'", "points": 30, "description": "Mocna baza espresso" },
+        { "condition": "mleko == 'mało'", "points": 30, "description": "Odrobina mleka" },
+        { "condition": "wielkosc == 'mala'", "points": 20, "description": "Niewielka porcja" },
+        { "condition": "temperatura == 'gorąca'", "points": 10, "description": "Gorąca kawa" },
+        { "condition": "kofeina == 'wysoka'", "points": 10, "description": "Dużo kofeiny" }
+      ]
+    },
+    {
+      "name": "Affogato",
+      "rules": [
+        { "condition": "slodycz == 'wysoka'", "points": 30, "description": "Lody + espresso = słodkie" },
+        { "condition": "temperatura == 'zimna'", "points": 30, "description": "Zimny deser kawowy" },
+        { "condition": "mleko != 'brak'", "points": 10, "description": "Zawiera mleko" },
+        { "condition": "wielkosc == 'mala'", "points": 20, "description": "Mała porcja" },
+        { "condition": "kofeina == 'średnia'", "points": 10, "description": "Umiarkowana kofeina" }
+      ]
+    },
+    {
+      "name": "Frappe",
+      "rules": [
+        { "condition": "temperatura == 'zimna'", "points": 40, "description": "Zimna kawa" },
+        { "condition": "slodycz == 'średnia'", "points": 20, "description": "Umiarkowanie słodka" },
+        { "condition": "wielkosc == 'duza'", "points": 20, "description": "Duży napój" },
+        { "condition": "kofeina == 'średnia'", "points": 20, "description": "Średnia dawka kofeiny" }
+      ]
+    },
+    {
+      "name": "Iced Latte",
+      "rules": [
+        { "condition": "temperatura == 'zimna'", "points": 40, "description": "Zimny napój mleczny" },
+        { "condition": "mleko == 'dużo'", "points": 30, "description": "Duża ilość mleka" },
+        { "condition": "slodycz == 'średnia'", "points": 20, "description": "Średnia słodycz" },
+        { "condition": "kofeina == 'niska'", "points": 10, "description": "Niska zawartość kofeiny" }
+      ]
+    },
+    {
+      "name": "Iced Americano",
+      "rules": [
+        { "condition": "temperatura == 'zimna'", "points": 40, "description": "Zimna czarna kawa" },
+        { "condition": "moc in ['średnia','wysoka']", "points": 30, "description": "Wyraźna moc" },
+        { "condition": "mleko == 'brak'", "points": 20, "description": "Bez mleka" },
+        { "condition": "kofeina == 'średnia'", "points": 10, "description": "Umiarkowana kofeina" }
+      ]
+    },
+    {
+      "name": "Irish Coffee",
+      "rules": [
+        { "condition": "slodycz == 'wysoka'", "points": 20, "description": "Słodzona" },
+        { "condition": "temperatura == 'gorąca'", "points": 20, "description": "Gorąca" },
+        { "condition": "wielkosc == 'duza'", "points": 20, "description": "Duża porcja" },
+        { "condition": "kofeina == 'średnia'", "points": 10, "description": "Średnia zawartość kofeiny" },
+        { "condition": "mleko == 'mało'", "points": 30, "description": "Bita śmietana/mleko w niewielkiej ilości" }
+      ]
+    },
+    {
+      "name": "Vienna",
+      "rules": [
+        { "condition": "slodycz == 'wysoka'", "points": 30, "description": "Bardzo słodka" },
+        { "condition": "mleko == 'dużo'", "points": 20, "description": "Dużo mleka/bitej śmietany" },
+        { "condition": "temperatura == 'gorąca'", "points": 20, "description": "Gorąca" },
+        { "condition": "wielkosc == 'duza'", "points": 20, "description": "Duża porcja" },
+        { "condition": "kofeina == 'średnia'", "points": 10, "description": "Średnia dawka kofeiny" }
+      ]
+    },
+    {
+      "name": "Cold Brew",
+      "rules": [
+        { "condition": "temperatura == 'zimna'", "points": 40, "description": "Zimna ekstrakcja" },
+        { "condition": "moc == 'wysoka'", "points": 30, "description": "Silna moc" },
+        { "condition": "slodycz == 'niska'", "points": 10, "description": "Bez słodyczy" },
+        { "condition": "wielkosc == 'duza'", "points": 10, "description": "Duża porcja" },
+        { "condition": "kofeina == 'wysoka'", "points": 10, "description": "Dużo kofeiny" }
+      ]
+    },
+    {
+      "name": "Flat Mocha",
+      "rules": [
+        { "condition": "slodycz == 'wysoka'", "points": 30, "description": "Słodka z czekoladą" },
+        { "condition": "mleko == 'średnio'", "points": 20, "description": "Średnia ilość mleka" },
+        { "condition": "moc == 'średnia'", "points": 20, "description": "Średnia moc" },
+        { "condition": "wielkosc == 'srednia'", "points": 20, "description": "Średni rozmiar" },
+        { "condition": "kofeina == 'średnia'", "points": 10, "description": "Umiarkowana kofeina" }
+      ]
+    },
+    {
+      "name": "Blonde Roast",
+      "rules": [
+        { "condition": "moc == 'niska'", "points": 40, "description": "Łagodna moc" },
+        { "condition": "slodycz == 'niska'", "points": 20, "description": "Lekko słodka" },
+        { "condition": "mleko == 'mało'", "points": 10, "description": "Trochę mleka" },
+        { "condition": "temperatura == 'gorąca'", "points": 20, "description": "Gorąca" },
+        { "condition": "kofeina == 'wysoka'", "points": 10, "description": "Zaskakująco dużo kofeiny" }
+      ]
+    }
+  ]
+}
