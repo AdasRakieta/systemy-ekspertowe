@@ -127,6 +127,77 @@ main {
     font-size: 0.95rem;
 }
 
+/* Sugestie kontekstowe */
+.suggestions-section {
+    margin-bottom: 32px;
+    padding: 28px;
+    background: linear-gradient(135deg, #f7f3ff 0%, #f0f7ff 100%);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+}
+
+.suggestions-meta {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    margin-bottom: 18px;
+}
+
+.suggestions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 14px;
+}
+
+.suggestion-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 18px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.suggestion-label {
+    font-size: 0.92rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.suggestion-value {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.suggestion-apply {
+    align-self: flex-start;
+    background: #f1f5ff;
+    color: #0b57d0;
+    border: 1px solid #cfe0ff;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.suggestion-apply:hover {
+    background: #e7f1ff;
+    transform: translateY(-1px);
+}
+
+.suggestion-apply:disabled {
+    background: #f1f1f4;
+    border-color: #e4e4e8;
+    color: #a0a0a8;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
 /* Formularz */
 .form-container {
     background:

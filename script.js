@@ -54,7 +54,8 @@ const polishLabels = {
         humorystyczny: 'Humorystyczny',
         tajemniczy: 'Tajemniczy',
         dynamiczny: 'Dynamiczny',
-        liryczny: 'Liryczny'
+        liryczny: 'Liryczny',
+        relaksujacy: 'Relaksujący'
     },
     dlugosc: {
         krotka: 'Krótka',
@@ -97,6 +98,17 @@ const polishLabels = {
         sredniowiecze: 'Średniowiecze',
         wspolczesna: 'Współczesna',
         przyszlosc: 'Przyszłość'
+    }
+};
+
+const suggestionValueMap = {
+    tempo: {
+        powolne: 'wolne'
+    },
+    swiat: {
+        fantasy: 'magiczny',
+        wspolczesnosc: 'wspolczesny',
+        alternatywna_rzeczywistosc: 'magiczny'
     }
 };
 
@@ -163,6 +175,7 @@ const presets = [
 // Inicjalizacja aplikacji
 document.addEventListener('DOMContentLoaded', () => {
     loadOptions();
+    loadSuggestions();
     setupFormHandlers();
     setupAdvancedToggle();
     renderPresets();
@@ -259,6 +272,67 @@ async function loadOptions() {
     }
 }
 
+async function loadSuggestions() {
+    try {
+        const response = await fetch(`${API_URL}/api/suggestions`);
+        if (!response.ok) {
+            throw new Error('Błąd ładowania sugestii');
+        }
+        const suggestions = await response.json();
+        renderSuggestions(suggestions);
+    } catch (error) {
+        console.error('Błąd ładowania sugestii:', error);
+        const section = document.getElementById('suggestionsSection');
+        if (section) section.style.display = 'none';
+    }
+}
+
+function renderSuggestions(data) {
+    const section = document.getElementById('suggestionsSection');
+    const grid = document.getElementById('suggestionsGrid');
+    const meta = document.getElementById('suggestionsMeta');
+    if (!section || !grid) return;
+
+    const items = [
+        { label: 'Sugerowany gatunek na teraz', value: data.gatunek, field: 'gatunek' },
+        { label: 'Świat na tę porę roku', value: data.swiat, field: 'swiat' },
+        { label: 'Klimat przy dobrym nastroju', value: data.klimat_dobry_nastroj, field: 'klimat' },
+        { label: 'Klimat przy złym nastroju', value: data.klimat_zly_nastroj, field: 'klimat' },
+        { label: 'Tempo przy małej ilości czasu', value: data.tempo_malo_czasu, field: 'tempo' },
+        { label: 'Tempo przy dużej ilości czasu', value: data.tempo_duzo_czasu, field: 'tempo' }
+    ];
+
+    grid.innerHTML = '';
+    items.forEach(item => {
+        const applyValue = mapSuggestionValue(item.field, item.value);
+        const labelValue = getLabel(item.field, applyValue || item.value);
+        const card = document.createElement('div');
+        card.className = 'suggestion-card';
+        card.innerHTML = `
+            <div class="suggestion-label">${item.label}</div>
+            <div class="suggestion-value">${labelValue}</div>
+            <button class="suggestion-apply" type="button" ${applyValue ? '' : 'disabled'}>
+                Ustaw w formularzu
+            </button>
+        `;
+
+        const btn = card.querySelector('.suggestion-apply');
+        if (btn && applyValue) {
+            btn.addEventListener('click', () => applySuggestion(item.field, applyValue));
+        }
+
+        grid.appendChild(card);
+    });
+
+    if (meta) {
+        const hour = typeof data.godzina === 'number' ? `${data.godzina}:00` : '-';
+        const month = typeof data.miesiac === 'number' ? data.miesiac : '-';
+        meta.textContent = `Aktualna godzina: ${hour} • Miesiąc: ${month}`;
+    }
+
+    section.style.display = 'block';
+}
+
 function renderChips(field, values) {
     const container = document.getElementById(`${field}Chips`);
     if (!container || !Array.isArray(values)) return;
@@ -352,6 +426,32 @@ function updateSelectionSummary() {
         summary.style.display = 'block';
     } else {
         summary.style.display = 'none';
+    }
+}
+
+function getLabel(field, value) {
+    if (!value) return '-';
+    return polishLabels[field]?.[value] || value;
+}
+
+function mapSuggestionValue(field, value) {
+    const mapped = suggestionValueMap[field]?.[value] || value;
+    const hasLabel = Boolean(polishLabels[field]?.[mapped]);
+    return hasLabel ? mapped : null;
+}
+
+function applySuggestion(field, value) {
+    appState.selectedOptions[field] = value;
+    refreshChips(field);
+    updateBadge(field);
+    updateSelectionSummary();
+
+    const needsAdvanced = ['dlugosc', 'swiat', 'wiek_bohatera', 'miejsce', 'pochodzenie', 'epoka'];
+    if (needsAdvanced.includes(field)) {
+        const advancedOptions = document.getElementById('advancedOptions');
+        const icon = document.querySelector('.toggle-icon');
+        if (advancedOptions) advancedOptions.style.display = 'block';
+        if (icon) icon.textContent = '▲';
     }
 }
 
