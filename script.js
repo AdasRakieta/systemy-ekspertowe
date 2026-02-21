@@ -275,6 +275,11 @@ function renderSuggestions(data) {
     const meta = document.getElementById('suggestionsMeta');
     if (!section || !grid) return;
 
+    const monthNames = [
+        'styczen', 'luty', 'marzec', 'kwiecien', 'maj', 'czerwiec',
+        'lipiec', 'sierpien', 'wrzesien', 'październik', 'listopad', 'grudzien'
+    ];
+
     const items = [
         { label: 'Sugerowany gatunek na teraz', value: data.gatunek, field: 'gatunek' },
         { label: 'Świat na tę porę roku', value: data.swiat, field: 'swiat' },
@@ -308,7 +313,8 @@ function renderSuggestions(data) {
 
     if (meta) {
         const hour = typeof data.godzina === 'number' ? `${data.godzina}:00` : '-';
-        const month = typeof data.miesiac === 'number' ? data.miesiac : '-';
+        const monthIndex = typeof data.miesiac === 'number' ? data.miesiac - 1 : -1;
+        const month = monthNames[monthIndex] || '-';
         meta.textContent = `Aktualna godzina: ${hour} • Miesiąc: ${month}`;
     }
 
