@@ -100,7 +100,7 @@ const suggestionValueMap = {
 // Presety (gotowe profile) - single select
 const presets = [
     {
-        name: '🧙 Fan Fantasy',
+        name: 'Fan Fantasy',
         icon: '🧙',
         selections: {
             gatunek: 'fantasy',
@@ -110,7 +110,7 @@ const presets = [
         }
     },
     {
-        name: '🔍 Detektyw',
+        name: 'Detektyw',
         icon: '🔍',
         selections: {
             gatunek: 'kryminal',
@@ -119,7 +119,7 @@ const presets = [
         }
     },
     {
-        name: '😌 Lektura relaksująca',
+        name: 'Lektura relaksująca',
         icon: '😌',
         selections: {
             gatunek: 'romans',
@@ -128,7 +128,7 @@ const presets = [
         }
     },
     {
-        name: '🚀 Sci-Fi',
+        name: 'Sci-Fi',
         icon: '🚀',
         selections: {
             gatunek: 'science_fiction',
@@ -138,7 +138,7 @@ const presets = [
         }
     },
     {
-        name: '💭 Głębokie przemyślenia',
+        name: 'Głębokie przemyślenia',
         icon: '💭',
         selections: {
             gatunek: 'biografia',
@@ -147,7 +147,7 @@ const presets = [
         }
     },
     {
-        name: '😱 Mroczne klimaty',
+        name: 'Mroczne klimaty',
         icon: '😱',
         selections: {
             gatunek: 'horror',
