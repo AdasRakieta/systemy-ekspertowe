@@ -20,15 +20,15 @@ def sugerowany_gatunek_dla_godziny():
     """
     godzina = datetime.datetime.now().hour
     if 5 <= godzina <= 9:
-        return "biografia"  # rano - motywujące historie
+        return "biografia"
     elif 10 <= godzina <= 14:
-        return "reportaz"  # w ciągu dnia - poznawcze
+        return "reportaz" 
     elif 15 <= godzina <= 18:
-        return "thriller"  # popołudnie - angażujące
+        return "thriller" 
     elif 19 <= godzina <= 22:
-        return "romans"  # wieczór - relaksujące
+        return "romans"  
     else:
-        return "horror"  # noc - mroczne
+        return "horror" 
 
 
 def sugerowany_klimat_dla_nastroju(nastroj):
@@ -308,8 +308,8 @@ def calculate_reading_time():
 
 
 if __name__ == '__main__':
-    print("🚀 Uruchamianie serwera backendu...")
-    print("📚 System Ekspercki - Rekomendacja Książek")
-    print("🌐 Serwer dostępny na: http://localhost:5001")
-    print("📖 Otwórz przeglądarkę i wejdź na: http://localhost:5001")
+    print("Uruchamianie serwera backendu...")
+    print("System Ekspercki - Rekomendacja Książek")
+    print("Serwer dostępny na: http://localhost:5001")
+    print("Otwórz przeglądarkę i wejdź na: http://localhost:5001")
     app.run(debug=True, host='0.0.0.0', port=5001)
