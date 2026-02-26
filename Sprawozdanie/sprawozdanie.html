@@ -424,6 +424,7 @@ winners = [b for b in top3 if b["score"] == max_score]</code></pre>
 
   <h3>5.3 Zrzuty ekranu – przykład rekomendacji</h3>
 
+
   <div class="note">
     <strong>Przypadek testowy:</strong> Użytkownik wybiera gatunek <em>thriller</em>,
     klimat <em>psychologiczny</em>, tempo <em>dynamiczne</em>, długość <em>średnia</em>,
@@ -431,9 +432,11 @@ winners = [b for b in top3 if b["score"] == max_score]</code></pre>
   </div>
 
   <p><em>Widok formularza z wybranymi chipami:</em></p>
+  <img src="GUI.png" alt="Zrzut ekranu GUI" style="max-width:600px; border:1px solid #ccc; margin-bottom:12px;">
   <p>Wybrane preferencje: thriller, psychologiczny, dynamiczne, srednia, dorosly</p>
 
   <p><em>Widok wyników Top 3:</em></p>
+  <img src="Rekomendacja.png" alt="Zrzut ekranu rekomendacji" style="max-width:600px; border:1px solid #ccc; margin-bottom:12px;">
   <table>
     <tr><th>Miejsce</th><th>Tytuł</th><th>Wynik</th><th>Aktywowane reguły</th></tr>
     <tr>
@@ -485,6 +488,7 @@ winners = [b for b in top3 if b["score"] == max_score]</code></pre>
     Projekt zawiera 14 plików testowych (łącznie ponad 50 przypadków testowych) uruchamianych
     za pomocą <code>pytest</code>. Konfiguracja w pliku <code>pytest.ini</code>.
   </p>
+  <img src="test_wyniki.png" alt="Zrzut ekranu wyników testów" style="max-width:600px; border:1px solid #ccc; margin-bottom:12px;">
   <table>
     <tr><th>Plik testowy</th><th>Zakres testowania</th></tr>
     <tr><td><code>test_rules.py</code></td><td>Podstawowe operatory rule-engine: <code>==</code>, <code>!=</code>, <code>in</code>, obsługa brakujących pól</td></tr>

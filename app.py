@@ -286,25 +286,6 @@ def get_suggestions():
     return jsonify(suggestions)
 
 
-@app.route('/api/reading-time', methods=['POST'])
-def calculate_reading_time():
-    """
-    Oblicza szacowany czas czytania na podstawie długości i tempa
-    """
-    try:
-        data = request.get_json()
-        dlugosc = data.get('dlugosc', 'srednia')
-        tempo = data.get('tempo_czytania', 'srednie')
-        
-        czas_min = szacowany_czas_czytania(dlugosc, tempo)
-        
-        return jsonify({
-            "czas_minut": czas_min,
-            "czas_godzin": round(czas_min / 60, 1),
-            "opis": f"~{czas_min // 60}h {czas_min % 60}min"
-        })
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
 
 
 if __name__ == '__main__':
