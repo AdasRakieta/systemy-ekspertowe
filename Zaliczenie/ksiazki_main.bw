@@ -1,0 +1,142 @@
+//------------------------------------------------------------------------------
+//
+// èrÛd≥owa postaÊ aplikacji zapisanej w pliku:
+//  C:\Users\pz_przybysz\Documents\git\Systemy eksperckie\Zaliczenie\ksiazki_main.BBW
+//
+//------------------------------------------------------------------------------
+
+knowledge base ksiazki_main
+
+sources
+
+  wyjaúnienia_coto_001:
+    type what_is_file
+    file "coto001.dbw";
+
+  baza_metafor_001:
+    type metaphors
+    file "META001.dbm";
+
+  ksiazki_logika:
+    type kb
+    file "ksiazki_NS.zw";
+
+
+end; // sources
+
+facets
+
+  ask     yes;
+  single  yes;
+
+  nastroj :
+     ask     yes
+     single  yes
+     val oneof  
+     { 
+        "mroczny",
+        "lekki",
+        "refleksyjny"
+     };
+
+  tempo :
+     ask     yes
+     single  yes
+     val oneof  
+     { 
+        "szybkie",
+        "wolne"
+     };
+
+  osadzenie :
+     ask     yes
+     single  yes
+     val oneof  
+     { 
+        "realistyczne",
+        "fantastyczne"
+     };
+
+  polecana_ksiazka :
+     ask     yes
+     single  yes
+     val oneof  
+     { 
+        "zaginiona_dziewczyna",
+        "droga",
+        "milczenie_owiec",
+        "dracula",
+        "w_pustyni_i_w_puszczy",
+        "harry_potter",
+        "duma_i_uprzedzenie",
+        "hobbit",
+        "cesarz",
+        "watchmen",
+        "steve_jobs",
+        "solaris"
+     };
+
+  tytul :
+     ask     no
+     single  yes;
+
+end; // facets
+
+control
+run;
+	
+// 	********************************** FUNKCJE *********************************
+	function wyjdz
+	begin
+		mainMenu;
+	end;
+
+	function winieta
+	begin
+		char Text1, Text2, Text3;
+		createAppWindow;
+		setAppWinTitle(" DORADCA CZYTELNIKA ");
+		Text1 := " WYBOR KSIAZKI ";
+		Text2 := "System z obsluga obiektow i wyjasnien.";
+		Text3 := "Projekt CAKE / PC-Shell";
+		vignette( Text1, Text2, Text3 );
+	end;
+
+	function asystent
+	begin
+		solutionWin( "yes" );
+		delNewFacts;
+		setSysText ( problem, "[B Dobieranie ksiazki..." );
+		getSource ( "ksiazki_logika" );
+		goal ( "polecana_ksiazka = X" );
+		freeSource ( "ksiazki_logika" );
+	end;
+
+//rozmiary okien
+	setWindowPos( picture_ask, 10, 70, 600, 450, 0);
+	setWindowPos( picture_solution, 10, 70, 600, 450, 0);
+	setWindowPos( ask, 700, 70, 200, 200, 0);
+	setWindowPos( solution, 700, 70, 200, 200, 0);
+	setWindowPos( video_solution, 950, 70, 320, 240, 0);
+	setWindowPos( what_is, 700, 410, 550, 100, 0); 	
+
+	winieta;
+	int MenuGlowne, Menu_1, Menu_2;
+	createMenu( MenuGlowne );
+		createPopupMenu( Menu_1, "&Menu" );
+			appendMenu( Menu_1, "&Rozpocznij dobieranie ksiazki", asystent );
+			appendMenu( Menu_1, separator, _ );
+			appendMenu(Menu_1, "&Wyjscie", wyjdz );
+		appendMenu ( MenuGlowne, menu, Menu_1);
+	appendMenu(MenuGlowne,menu,window);
+		createPopupMenu( Menu_2, "&Pomoc" );
+			appendMenu( Menu_2, "&Informacje...", winieta );
+		appendMenu ( MenuGlowne, menu, Menu_2 );
+	fullMenu( MenuGlowne );
+
+end
+
+
+;
+
+end; // knowledge base

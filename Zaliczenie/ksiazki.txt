@@ -1,0 +1,22 @@
+polecana_ksiazka
+nastroj = mroczny :
+	tempo = szybkie :
+		osadzenie = realistyczne : zaginiona_dziewczyna (1.0)
+		osadzenie = fantastyczne : droga (1.0)
+	tempo = wolne :
+		osadzenie = realistyczne : milczenie_owiec (1.0)
+		osadzenie = fantastyczne : dracula (1.0)
+nastroj = lekki :
+	tempo = szybkie :
+		osadzenie = realistyczne : w_pustyni_i_w_puszczy (1.0)
+		osadzenie = fantastyczne : harry_potter (1.0)
+	tempo = wolne :
+		osadzenie = realistyczne : duma_i_uprzedzenie (1.0)
+		osadzenie = fantastyczne : hobbit (1.0)
+nastroj = refleksyjny :
+	tempo = szybkie :
+		osadzenie = realistyczne : cesarz (1.0)
+		osadzenie = fantastyczne : watchmen (1.0)
+	tempo = wolne :
+		osadzenie = realistyczne : steve_jobs (1.0)
+		osadzenie = fantastyczne : solaris (1.0)

@@ -1,0 +1,38 @@
+##nastroj = mroczny
+Mroczny nastroj to powazne, czesto niepokojace tematy. Idealne dla fanow mocnych wrazen.
+##nastroj = lekki
+Lekki nastroj to powiesci przygodowe, romanse i ksiazki mlodziezowe. Relaks gwarantowany.
+##nastroj = refleksyjny
+Refleksyjny nastroj zmusza do myslenia, charakterystyczny dla reportazy i biografii.
+##tempo = szybkie
+Szybkie tempo to wartka akcja, krotkie rozdzialy i ciagle napiecie.
+##tempo = wolne
+Wolne tempo pozwala na dlugie opisy i doglebna psychologie postaci.
+##osadzenie = realistyczne
+Wspolczesny lub historyczny swiat, ktory znamy z doswiadczenia.
+##osadzenie = fantastyczne
+Swiat magii, elfow, statkow kosmicznych lub obcych planet.
+##polecana_ksiazka = zaginiona_dziewczyna
+Zaginiona dziewczyna - Gillian Flynn. Piekielnie intrygujacy thriller.
+##polecana_ksiazka = droga
+Droga - Cormac McCarthy. Potezna opowiesc postapokaliptyczna.
+##polecana_ksiazka = milczenie_owiec
+Milczenie owiec - Thomas Harris. Kultowa pozycja o seryjnym mordercy.
+##polecana_ksiazka = dracula
+Dracula - Bram Stoker. Matka wszystkich powiesci o wampirach.
+##polecana_ksiazka = w_pustyni_i_w_puszczy
+W pustyni i w puszczy - Henryk Sienkiewicz. Klasyka literatury przygodowej.
+##polecana_ksiazka = harry_potter
+Harry Potter - J.K. Rowling. Zjawiskowa opowiesc o mlodym czarodzieju.
+##polecana_ksiazka = duma_i_uprzedzenie
+Duma i uprzedzenie - Jane Austen. Portret dawnej Anglii.
+##polecana_ksiazka = hobbit
+Hobbit - J.R.R. Tolkien. Jedna z najpiekniejszych basni literackich.
+##polecana_ksiazka = cesarz
+Cesarz - Ryszard Kapuscinski. Mistrzowski reportaz o wladzy absolutnej.
+##polecana_ksiazka = watchmen
+Watchmen - Alan Moore. Legendarna opowiesc komiksowa o superbohaterach.
+##polecana_ksiazka = steve_jobs
+Steve Jobs - Walter Isaacson. Fascynujaca podroz po zyciu wizjonera.
+##polecana_ksiazka = solaris
+Solaris - Stanislaw Lem. Jedna z najlepszych powiesci science-fiction.

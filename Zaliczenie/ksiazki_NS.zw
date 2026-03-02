@@ -1,0 +1,150 @@
+//------------------------------------------------------------------------------
+//
+// Tekst Ÿród³a zapisanego w pliku:
+//  ksiazki_NS.bzw
+//
+//------------------------------------------------------------------------------
+
+knowledge source ksiazki_logika
+
+facets
+
+  ask     yes;
+  single  yes;
+
+  nastroj :
+     ask     yes
+     single  yes
+     val oneof  
+     { 
+        "mroczny",
+        "lekki",
+        "refleksyjny"
+     };
+
+  tempo :
+     ask     yes
+     single  yes
+     val oneof  
+     { 
+        "szybkie",
+        "wolne"
+     };
+
+  osadzenie :
+     ask     yes
+     single  yes
+     val oneof  
+     { 
+        "realistyczne",
+        "fantastyczne"
+     };
+
+  polecana_ksiazka :
+     ask     yes
+     single  yes
+     val oneof  
+     { 
+        "zaginiona_dziewczyna",
+        "droga",
+        "milczenie_owiec",
+        "dracula",
+        "w_pustyni_i_w_puszczy",
+        "harry_potter",
+        "duma_i_uprzedzenie",
+        "hobbit",
+        "cesarz",
+        "watchmen",
+        "steve_jobs",
+        "solaris"
+     };
+
+  tytul :
+     ask     no
+     single  yes;
+
+end; // facets
+
+rules
+
+   1001: polecana_ksiazka = "zaginiona_dziewczyna" if
+             nastroj = "mroczny" 
+             & tempo = "szybkie" 
+             & osadzenie = "realistyczne";
+
+   1002: polecana_ksiazka = "droga" if
+             nastroj = "mroczny" 
+             & tempo = "szybkie" 
+             & osadzenie = "fantastyczne";
+
+   1003: polecana_ksiazka = "milczenie_owiec" if
+             nastroj = "mroczny" 
+             & tempo = "wolne" 
+             & osadzenie = "realistyczne";
+
+   1004: polecana_ksiazka = "dracula" if
+             nastroj = "mroczny" 
+             & tempo = "wolne" 
+             & osadzenie = "fantastyczne";
+
+   1005: polecana_ksiazka = "w_pustyni_i_w_puszczy" if
+             nastroj = "lekki" 
+             & tempo = "szybkie" 
+             & osadzenie = "realistyczne";
+
+   1006: polecana_ksiazka = "harry_potter" if
+             nastroj = "lekki" 
+             & tempo = "szybkie" 
+             & osadzenie = "fantastyczne";
+
+   1007: polecana_ksiazka = "duma_i_uprzedzenie" if
+             nastroj = "lekki" 
+             & tempo = "wolne" 
+             & osadzenie = "realistyczne";
+
+   1008: polecana_ksiazka = "hobbit" if
+             nastroj = "lekki" 
+             & tempo = "wolne" 
+             & osadzenie = "fantastyczne";
+
+   1009: polecana_ksiazka = "cesarz" if
+             nastroj = "refleksyjny" 
+             & tempo = "szybkie" 
+             & osadzenie = "realistyczne";
+
+   1010: polecana_ksiazka = "watchmen" if
+             nastroj = "refleksyjny" 
+             & tempo = "szybkie" 
+             & osadzenie = "fantastyczne";
+
+   1011: polecana_ksiazka = "steve_jobs" if
+             nastroj = "refleksyjny" 
+             & tempo = "wolne" 
+             & osadzenie = "realistyczne";
+
+   1012: polecana_ksiazka = "solaris" if
+             nastroj = "refleksyjny" 
+             & tempo = "wolne" 
+             & osadzenie = "fantastyczne";
+
+
+end; // rules
+
+facts
+
+   tytul ( zaginiona_dziewczyna )  = 1;
+   tytul ( droga )  = 1;
+   tytul ( milczenie_owiec )  = 1;
+   tytul ( dracula )  = 1;
+   tytul ( w_pustyni_i_w_puszczy )  = 1;
+   tytul ( harry_potter )  = 1;
+   tytul ( duma_i_uprzedzenie )  = 1;
+   tytul ( hobbit )  = 1;
+   tytul ( cesarz )  = 1;
+   tytul ( watchmen )  = 1;
+   tytul ( steve_jobs )  = 1;
+   tytul ( solaris )  = 1;
+
+end; // facts
+
+end; // knowledge source
